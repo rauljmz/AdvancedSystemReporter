@@ -17,6 +17,15 @@ namespace ASR.Interface
 
 		#endregion
 
+        private string _emptyText = "-";
+
+        public string EmptyText
+        {
+            get { return _emptyText; }
+            set { _emptyText = value; }
+        }
+
+
         public string DateFormat { get; set; }
 
         public string GetDateFormat(string defaultFormat)

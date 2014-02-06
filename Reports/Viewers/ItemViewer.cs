@@ -28,6 +28,8 @@ namespace ASR.Reports.Items
 
         #region Public properties
 
+       
+
         public int MaxLength
         {
             get
@@ -52,7 +54,7 @@ namespace ASR.Reports.Items
                         "ChildrenCount",
                         "Created",
                         "CreatedBy",
-                         "DisplayName",
+                        "DisplayName",
                         "Name",
                         "Language",
                         "LockedBy",
@@ -64,7 +66,11 @@ namespace ASR.Reports.Items
                         "UpdatedBy",
                         "Version",
                         "Versions",
-                        "Workflow"
+                        "Workflow",
+                        "HasClones",
+                        "IsClone",
+                        "SourceItemPath"
+
                     };
             }
         }
@@ -74,6 +80,29 @@ namespace ASR.Reports.Items
         #region Public methods
 
         public override void Display(DisplayElement dElement)
+        {
+            var itemElement = ExtractItem(dElement);
+            
+            if (itemElement == null)
+            {
+                return;
+            }
+            dElement.Value = itemElement.Uri.ToString();
+
+            dElement.Header = itemElement.Name;
+
+            foreach (var column in Columns)
+            {
+                if (!dElement.HasColumn(column.Header))
+                {
+                    var text = getColumnText(column.Name, itemElement);
+                    dElement.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
+                }
+            }
+            dElement.Icon = itemElement.Appearance.Icon;
+        }
+
+        protected virtual Item ExtractItem(DisplayElement dElement)
         {
             var itemElement = dElement.Element as Item;
 
@@ -92,25 +121,7 @@ namespace ASR.Reports.Items
                     itemElement = Database.GetItem(((AuditItem)dElement.Element).ItemUri);
                 }
             }
-
-
-            if (itemElement == null)
-            {
-                return;
-            }
-            dElement.Value = itemElement.Uri.ToString();
-
-            dElement.Header = itemElement.Name;
-
-            foreach (var column in Columns)
-            {
-                if (!dElement.HasColumn(column.Header))
-                {
-                    var text = getColumnText(column.Name, itemElement);
-                    dElement.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
-                }
-            }
-            dElement.Icon = itemElement.Appearance.Icon;
+            return itemElement;
         }
 
         #endregion
@@ -188,6 +199,20 @@ namespace ASR.Reports.Items
 
                 case "language":
                     return itemElement.Language.CultureInfo.DisplayName;
+
+                case "isclone":
+                    return itemElement.IsClone.ToString();
+
+                case "hasclones":
+                    return itemElement.HasClones.ToString();
+
+                case "sourceitempath":
+                    if (itemElement.Source != null)
+                    {
+                        return itemElement.Source.Paths.FullPath.ToString();
+                    }
+                    return EmptyText;
+              
                 default:
                     return GetFriendlyFieldValue(name, itemElement);
             }
@@ -197,7 +222,7 @@ namespace ASR.Reports.Items
 
         #region Private methods
 
-        private static string getWorkflowInfo(Item itemElement)
+        private string getWorkflowInfo(Item itemElement)
         {
             var sb = new StringBuilder();
             var iw = itemElement.State.GetWorkflow();
@@ -222,15 +247,15 @@ namespace ASR.Reports.Items
                     sb.AppendFormat(" for {0} days {1} hours {2} minutes", span.Days, span.Hours, span.Minutes);
                 }
             }
-            return sb.ToString();
+            return sb.Length > 0 ? sb.ToString() : EmptyText;
         }
 
         protected virtual string GetFriendlyFieldValue(string name, Item itemElement)
         {
-            // to allow forcing fields rather than properties, allow prepending the name with #
+            // to allow forcing fields rather than properties, allow prepending the name with @
             name = name.TrimStart('@');
             var field = itemElement.Fields[name];
-            if (field != null)
+            if (field != null && field.HasValue)
             {
                 switch (field.TypeKey)
                 {
@@ -282,7 +307,7 @@ namespace ASR.Reports.Items
                         return StringUtil.Clip(StringUtil.RemoveTags(field.Value), MaxLength, true);
                 }
             }
-            return String.Empty;
+            return EmptyText;
         }
 
         #endregion

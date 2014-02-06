@@ -28,7 +28,9 @@ namespace ASR.Reports.Items
 
         #region Public properties
 
-       
+        public string Language { get; set; }
+
+        public string Version { get; set; }
 
         public int MaxLength
         {
@@ -51,6 +53,7 @@ namespace ASR.Reports.Items
             {
                 return new string[]
                     {
+                        "Guid",
                         "ChildrenCount",
                         "Created",
                         "CreatedBy",
@@ -82,7 +85,9 @@ namespace ASR.Reports.Items
         public override void Display(DisplayElement dElement)
         {
             var itemElement = ExtractItem(dElement);
-            
+            itemElement = GetCorrectLanguage(itemElement);
+            itemElement = GetCorrectVersion(itemElement);
+        
             if (itemElement == null)
             {
                 return;
@@ -100,6 +105,50 @@ namespace ASR.Reports.Items
                 }
             }
             dElement.Icon = itemElement.Appearance.Icon;
+        }
+
+        protected virtual Item GetCorrectVersion(Item itemElement)
+        {
+            if (string.IsNullOrEmpty(Version)) return itemElement;
+
+            switch (Version)
+            {
+                case "first" :
+                    return itemElement.Database.GetItem(itemElement.ID, itemElement.Language, new Sitecore.Data.Version(1));
+                case "latest" :
+                    return itemElement.Versions.GetLatestVersion();
+                case "previous":
+                    if (itemElement.Version.Number > 1)
+                    {
+                        return itemElement.Database.GetItem(itemElement.ID, itemElement.Language, new Sitecore.Data.Version(itemElement.Version.Number - 1));
+                    }
+                    return itemElement;
+                case "next":
+                    if (!itemElement.Versions.IsLatestVersion())
+                    {
+                        return itemElement.Database.GetItem(itemElement.ID, itemElement.Language, new Sitecore.Data.Version(itemElement.Version.Number + 1));
+                    }
+                    return itemElement;                
+            }
+            var version = itemElement.Versions.GetVersionNumbers().FirstOrDefault(v => v.ToString() == Version);
+
+            if (version != null)
+            {
+                return itemElement.Database.GetItem(itemElement.ID, itemElement.Language, version);
+            }
+            
+            return itemElement;
+        }
+
+        protected virtual Item GetCorrectLanguage(Item itemElement)
+        {
+            if (string.IsNullOrEmpty(Language)) return itemElement;
+
+            var language = Sitecore.Globalization.Language.Parse(Language);
+
+            if (language == null) return itemElement;
+
+            return itemElement.Database.GetItem(itemElement.ID, language);
         }
 
         protected virtual Item ExtractItem(DisplayElement dElement)
@@ -149,6 +198,9 @@ namespace ASR.Reports.Items
         {
             switch (name)
             {
+                case "guid":
+                    return itemElement.ID.ToString();
+
                 case "name":
                     return itemElement.Name;
 

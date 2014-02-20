@@ -1,0 +1,1 @@
+Add a reference to the Sitecore.Kernel and Sitecore.Client for the correct Sitecore version.

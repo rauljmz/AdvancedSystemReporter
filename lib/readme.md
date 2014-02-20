@@ -1,1 +1,0 @@
-Add a reference to the Sitecore.Kernel here.

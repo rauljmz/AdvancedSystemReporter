@@ -54,8 +54,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\lib\Sitecore.Kernel.dll</HintPath>
+     <Reference Include="Sitecore.Kernel">
+      <HintPath>..\lib\v$(SitecoreVersion)\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

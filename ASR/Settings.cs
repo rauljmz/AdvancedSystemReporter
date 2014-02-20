@@ -113,5 +113,13 @@
         return "true" == Sitecore.Configuration.Settings.GetSetting("ASR.AllowNonAdminDownloads", "false");
       }
     }
-	}
+
+    public string AdminUser
+    {
+        get
+        {
+            return Sitecore.Configuration.Settings.GetSetting("ASR.AdminUser", "sitecore\\admin");
+        }
+    }
+    }
 }

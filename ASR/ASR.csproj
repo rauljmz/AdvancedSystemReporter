@@ -54,8 +54,12 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\lib\v$(SitecoreVersion)\Sitecore.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\lib\v$(SitecoreVersion)\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -124,7 +128,6 @@
     <Compile Include="Settings.cs" />
     <Compile Include="sitecore\shell\download.aspx.cs">
       <DependentUpon>download.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Util.cs" />
     <Compile Include="DomainObjects\CommandItem.cs" />
@@ -145,13 +148,17 @@
     </Content>
     <Content Include="Controls\ItemSelectorDialog.xml" />
     <Content Include="editablecombo.js" />
-    <Content Include="sitecore\shell\download.aspx" />
+    <Content Include="sitecore\shell\download.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="ASR.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ASR.Download.config" />
+    <None Include="ASR.Download.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

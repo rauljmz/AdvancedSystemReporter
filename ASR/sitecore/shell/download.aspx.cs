@@ -1,9 +1,6 @@
 namespace ASR.sitecore.shell
 {
-    using System;
-    using System.Web;
-    using System.Web.UI;
-    using Sitecore.Security.Accounts;
+    using Sitecore.SecurityModel;
     using Sitecore.Shell;
 
     public class download : DownloadPage
@@ -12,7 +9,7 @@ namespace ASR.sitecore.shell
         {
             if (Current.Context.Settings.AllowNonAdminDownloads)
             {
-                using (new UserSwitcher(Current.Context.Settings.AdminUser, false))
+                using(new SecurityDisabler())
                 {
                     base.OnLoad(e);
                 }

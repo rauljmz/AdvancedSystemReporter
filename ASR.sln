@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASR.Reports", "Reports\ASR.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{1CA243E6-E64E-424D-9F6A-2FDFB8EA4F26}"
 	ProjectSection(SolutionItems) = preProject
+		data\packages\Advanced System Reporter-Download.package = data\packages\Advanced System Reporter-Download.package
 		data\packages\Advanced System Reporter.package = data\packages\Advanced System Reporter.package
 		data\Release Notes.txt = data\Release Notes.txt
 	EndProjectSection
@@ -21,10 +22,6 @@ EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.ASR.Master", "TDS.ASR.Master\TDS.ASR.Master.scproj", "{2234E999-A149-4BEF-9B0B-964A27FD0BEE}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -53,5 +50,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

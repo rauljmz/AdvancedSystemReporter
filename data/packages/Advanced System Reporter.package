@@ -1,9 +1,9 @@
-<project>
+<project site="asrtest" format="Zip Package">
   <Metadata>
     <metadata>
       <PackageName>Advanced System Reporter</PackageName>
       <Author>Alenka Caserman / Raul Jimenez / Chris Gamblen</Author>
-      <Version>1.5</Version>
+      <Version>1.6</Version>
       <Revision />
       <License />
       <Comment />
@@ -189,7 +189,6 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Templates/{B7886DD3-1DEC-41F9-A199-CDC547283AB6}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/all versions/{95652D2F-04A7-4952-9EC8-ACDE41686C3C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/only current version/{B5E750A4-A70D-4719-81D8-C483DDCE8554}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Aliases/{0751B146-851C-4766-88D2-CE00AE26961A}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All items/{ADC1E4E4-541B-45B8-BF65-57D4B02008F4}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Publishable Items/{3D7FA1E3-847C-4604-8B61-E2134408F8FA}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Users/{2EF22969-80E8-4335-9E0C-17F5E49D2049}/invariant/0</x-item>
@@ -215,10 +214,8 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Alias/{849E583C-C8AD-41CF-BDE9-8D68598623F3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Item Workflow Information/{E3E76543-6FDA-40D7-8C21-4FF98A2B11D9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemBasic/{965F8E6F-9002-46EA-99A3-801E95F12BF1}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemOwner/{0F5EE297-6E22-4AC4-BC71-57DBE4C32CA3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemSecurity/{3AB1FBD3-B6CE-4E8D-B3DF-5BEC8EECF259}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemViewer/{F28FC608-581E-41F5-BA49-14D4151A854C}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LinkedField/{E680B66D-C4FE-4B08-A8F5-438BE8860841}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer/{AF561ED2-A768-40D4-8517-1A8368368F0F}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer no sorting/{D6530D08-599A-4D5D-B2AD-4437A8345EC9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Media Viewer/{2B820570-CB3F-4644-9C04-2709BF0686BE}/invariant/0</x-item>
@@ -226,7 +223,6 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/SessionsViewer/{D1E7820D-8097-4561-B355-0B4498A02B80}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Viewer/{9B7B7673-0F9B-418A-BB05-535E5D6E959C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/WorkflowEventViewer/{175E396A-72E1-48EA-9AA6-CC3CF45A7419}/invariant/0</x-item>
-        <x-item>/master/sitecore/system/Modules/ASR/Reports/Active Aliases/{4CD235C1-28AF-43D7-94A4-BD72789A9152}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Aliases/{4F054B13-4156-4116-88C3-64FAF6D78AB0}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Audit/{C463282D-332D-4E65-AA05-5F85E3EA6B7C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links/{339D3839-4805-4AF9-ACF9-DB6AE011B83F}/invariant/0</x-item>
@@ -271,7 +267,6 @@ If you want to use the Email functionality make sure the default mail settings i
     </xitems>
     <xfiles>
       <Entries>
-        <x-item>/bin/CorePoint.DomainObjects.dll</x-item>
         <x-item>/App_Config/Include/ASR.config</x-item>
         <x-item>/bin/ASR.dll</x-item>
         <x-item>/bin/ASR.Reports.dll</x-item>

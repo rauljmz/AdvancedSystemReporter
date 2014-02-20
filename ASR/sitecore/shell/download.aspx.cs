@@ -8,7 +8,7 @@ namespace ASR.sitecore.shell
 
     public class download : DownloadPage
     {
-        private void Page_Load(object sender, System.EventArgs e)
+        protected virtual void OnLoad(object sender, System.EventArgs e)
         {
             if (Current.Context.Settings.AllowNonAdminDownloads)
             {

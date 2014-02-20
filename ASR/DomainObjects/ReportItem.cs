@@ -142,6 +142,7 @@ namespace ASR.DomainObjects
             Assert.IsNotNull(nvc, "Incorrect Parameters Format");
             var id = nvc["id"];
             if (id == null) return null;
+            id = System.Web.HttpUtility.UrlDecode(id);
             var database = Sitecore.Configuration.Factory.GetDatabase(Settings.Instance.ConfigurationDatabase);            
             var reportItem = new ReportItem(database.GetItem(id));
 

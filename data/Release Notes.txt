@@ -1,5 +1,16 @@
 Advanced System Reporter
 ------------------------
+v.1.6
+- fixed download page functionality for non-admin users in v.7
+
+- fixed desktop link throwing a argumentnull exception
+
+- Added support for new information in the standard Itemviewer: HasClones,IsClone,                    SourceItemPath,Guid
+
+- ItemViewer has Language and Version parameters allowing you to specify which version of the item is shown. Version accepts a number, or values: first, latest, next, previous
+
+- Added new viewer type: ASR.Reports.Viewers.ItemViewerCloneSource which offers all the functionality of ItemViewer but applied to the source of a cloned item.
+
 v.1.5
 
 - added support for the columns field in all viewers. When using a custom viewer you can override the AllowableColumns property to populate the dropdown in the column editor.

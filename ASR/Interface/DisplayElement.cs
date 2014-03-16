@@ -10,7 +10,7 @@ namespace ASR.Interface
         /// <summary>
         /// Object returned by the scanner.
         /// </summary>
-        public object Element { get; private set; }
+        public object Element { get; set; }
 
         public string Header { get; set; }
 

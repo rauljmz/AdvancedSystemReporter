@@ -12,7 +12,7 @@ templatekey: Scanner
 ----version----
 language: en
 version: 1
-revision: f50eb0a9-19ff-40bb-af4c-0e6e5476eb9a
+revision: ac552fd2-debe-4c31-9b07-6321fbd3f2eb
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -32,9 +32,9 @@ ASR.Reports.Scanners.PublishableItems
 field: {60ACFB3B-D34D-43D8-8B57-86D26B30DD5A}
 name: Attributes
 key: attributes
-content-length: 65
+content-length: 60
 
-Query=fast:{Root}/descendant-or-self::*|date={Date}|approved=true
+Query={Root}/descendant-or-self::*|date={Date}|approved=true
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f50eb0a9-19ff-40bb-af4c-0e6e5476eb9a
+ac552fd2-debe-4c31-9b07-6321fbd3f2eb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20111121T091556:634574637563396667
+20140220T163847:635285111271288963
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

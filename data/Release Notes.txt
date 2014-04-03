@@ -1,5 +1,8 @@
 Advanced System Reporter
 ------------------------
+v.1.6.1
+- fixed ItemViewer would not display field values for Item Clones
+
 v.1.6
 - fixed download page functionality for non-admin users in v.7
 

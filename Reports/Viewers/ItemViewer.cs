@@ -307,7 +307,7 @@ namespace ASR.Reports.Items
             // to allow forcing fields rather than properties, allow prepending the name with @
             name = name.TrimStart('@');
             var field = itemElement.Fields[name];
-            if (field != null && field.HasValue)
+            if (field != null && !string.IsNullOrEmpty(field.Value))
             {
                 switch (field.TypeKey)
                 {

@@ -13,26 +13,29 @@ namespace ASR.DomainObjects
     {
         public CommandItem(Item innerItem) : base(innerItem)
         {
+            Title = innerItem["title"];
+            Icon = innerItem["icon"];
+            Command = innerItem["command"];
+            SingleItemContext = innerItem["singleitemcontext"] == "1";
         }
 
 
         public string Title
         {
-            get { return InnerItem["title"]; }            
+            get;
+            private set;
         }
-        
-        public string Icon
-        {
-            get { return InnerItem["Icon"]; }
-        }
-        
-        public string Command
-        { get { return InnerItem["Command"]; } }
 
-        
+
+
+        public string Command
+        { get; private set; }
+
+
         public bool SingleItemContext
-        {        
-            get { return InnerItem["singleitemcontext"] == "1"; } 
+        {
+            get;
+            private set;
         }
 
         internal void Run(StringList values)

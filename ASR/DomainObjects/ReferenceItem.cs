@@ -7,29 +7,36 @@ using Sitecore.Data.Items;
 namespace ASR.DomainObjects
 {
 	
-	public class ReferenceItem : CustomItem
+	public class ReferenceItem : BaseItem
 	{
         private readonly string _currentuser;
 	    public ReferenceItem(Item i) : base(i)
 	    {
 	        _currentuser = Sitecore.Context.User.Name;
+            Assembly = i["assembly"];
+            Class = i["class"];
+            Attributes = i["attributes"];
+            PrettyName =  string.Format("{0} ({1})", Name,i.TemplateName); 
 	    }
 
 
         #region ItemFields
         public string Assembly
         {
-            get { return InnerItem["assembly"]; }
+            get;
+            private set;
         }
 
         public string Class
         {
-            get { return InnerItem["class"]; }
+            get;
+            private set;
         }
 
         public string Attributes
         {
-            get { return InnerItem["attributes"]; }
+            get;
+            private set;
         } 
         #endregion
 
@@ -68,7 +75,7 @@ namespace ASR.DomainObjects
 
 				if (pi != null)
 				{
-					pi.Value = Uri.UnescapeDataString(value);
+					pi.Value = System.Uri.UnescapeDataString(value);
 				}
 			}
 			// can't find element
@@ -104,10 +111,11 @@ namespace ASR.DomainObjects
 			}
 		}
 
-	    public string PrettyName
-	    {
-	        get { return string.Format("{0} ({1})", Name,InnerItem.TemplateName); }	        
-	    }
+        public string PrettyName
+        {
+            get;
+            private set;
+        }
 
 	    private void MakeParameterSet()
 		{

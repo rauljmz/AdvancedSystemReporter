@@ -6,45 +6,53 @@ using Sitecore.Data.Items;
 using Sitecore.Web.UI.HtmlControls;
 
 namespace ASR.DomainObjects
-{	
-	public class ParameterItem : BaseItem
-	{
-	    public ParameterItem(Item innerItem) : base(innerItem)
-	    {
-	    }
+{
+    public class ParameterItem : BaseItem
+    {
+        public ParameterItem(Item innerItem)
+            : base(innerItem)
+        {
+            Title = innerItem["title"];
+            Type = innerItem["type"];
+            ParametersField = innerItem["parameters"];
+            DefaultValue = innerItem["default value"];
+        }
 
         #region ItemFields
         public string Title
         {
-            get { return InnerItem["title"]; }
+            get;
+            private set;
         }
 
         public string Type
         {
-            get { return InnerItem["type"]; }
+            get;
+            private set;
         }
 
 
         public string ParametersField
         {
-            get { return InnerItem["parameters"]; }            
+            get;
+            private set;
         }
 
-	    private string DefaultValue { get { return InnerItem["default value"]; }  } 
+        public string DefaultValue { get; private set; }
 
         #endregion
 
         public string Token { get; set; }
 
-	    private string _value;
-		public string Value
-		{
-			get
-			{
-				if(_value == null) _value = DefaultValue;
+        private string _value;
+        public string Value
+        {
+            get
+            {
+                if (_value == null) _value = DefaultValue;
 
                 if (!string.IsNullOrEmpty(_value))
-				{
+                {
                     _value = _value.Replace("$sc_lastyear", DateTime.Today.AddYears(-1).ToString("yyyyMMddTHHmmss"));
                     _value = _value.Replace("$sc_lastweek", DateTime.Today.AddDays(-7).ToString("yyyyMMddTHHmmss"));
                     _value = _value.Replace("$sc_lastmonth", DateTime.Today.AddMonths(-1).ToString("yyyyMMddTHHmmss"));
@@ -52,16 +60,16 @@ namespace ASR.DomainObjects
                     _value = _value.Replace("$sc_today", DateTime.Today.ToString("yyyyMMddTHHmmss"));
                     _value = _value.Replace("$sc_now", DateTime.Now.ToString("yyyyMMddTHHmmss"));
                     _value = _value.Replace("$sc_currentuser", Sitecore.Context.User == null ? string.Empty : Sitecore.Context.User.Name);
-				}
+                }
                 return _value;
-			}
-			set
-			{
+            }
+            set
+            {
                 _value = value;
-			}
-		}
+            }
+        }
 
-        
+
 
         private NameValueCollection _params;
         public NameValueCollection Parameters
@@ -78,7 +86,7 @@ namespace ASR.DomainObjects
                         int i = st.IndexOf('=');
                         if (i > 0)
                         {
-                            _params.Add(st.Substring(0, i), st.Substring(i+1));
+                            _params.Add(st.Substring(0, i), st.Substring(i + 1));
                         }
                     }
                 }
@@ -86,10 +94,10 @@ namespace ASR.DomainObjects
             }
         }
 
-		public IEnumerable<ValueItem> PossibleValues()
-		{
-		    return this.InnerItem.Children.Select(i => new ValueItem(i));
-		}
+        public IEnumerable<ValueItem> PossibleValues()
+        {
+            return GetItem().Children.Select(i => new ValueItem(i));
+        }
 
         public Control MakeControl()
         {
@@ -149,5 +157,5 @@ namespace ASR.DomainObjects
             return input;
         }
 
-	}
+    }
 }

@@ -17,6 +17,8 @@ namespace ASR.DomainObjects
     {
         public ReportItem(Item innerItem) : base(innerItem)
         {
+            EmailText = innerItem["email text"];
+            Description = innerItem["description"];
         }
 
         #region Item Fields
@@ -44,15 +46,17 @@ namespace ASR.DomainObjects
         {
             get { return _filters ?? (_filters = GetMultilistField("filters").Select(i => new FilterItem(i)).ToArray()); }
         }
-        
+
         public string EmailText
         {
-            get { return InnerItem["email text"]; }
+            get;
+            private set;
         }
-        
+
         public string Description
         {
-            get { return InnerItem["description"]; }
+            get;
+            private set;
         } 
         #endregion
 

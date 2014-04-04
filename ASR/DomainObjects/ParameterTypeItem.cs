@@ -7,11 +7,13 @@ namespace ASR.DomainObjects
     {
         public ValueItem(Item innerItem) : base(innerItem)
         {
+            Value = innerItem["value"];
         }
-        
+
         public string Value
         {
-            get { return InnerItem["value"]; }
+            get;
+            private set;
         }
     }
 }

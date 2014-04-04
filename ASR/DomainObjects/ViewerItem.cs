@@ -7,11 +7,14 @@ namespace ASR.DomainObjects
 	{
 	    public ViewerItem(Item i) : base(i)
 	    {
+            ColumnsXml = i["columns"];
 	    }
 
 
-        public string ColumnsXml {
-            get { return InnerItem["columns"]; }
+        public string ColumnsXml
+        {
+            get;
+            private set;
         }
 
 	}

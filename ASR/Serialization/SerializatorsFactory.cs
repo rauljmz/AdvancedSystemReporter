@@ -14,8 +14,9 @@ namespace ASR.Serialization
             serializators = new Dictionary<Type, object>();
         }
 
-        public static void RegisterSerializator(Type t, ISerializator serializator)
+        public static void RegisterSerializator(ISerializator serializator)
         {
+            var t = serializator.Type;
             if (serializators.ContainsKey(t))
             {
                 serializators[t] = serializator;

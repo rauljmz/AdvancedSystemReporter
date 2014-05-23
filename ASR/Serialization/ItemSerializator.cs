@@ -30,6 +30,12 @@ namespace ASR.Serialization
            return Sitecore.Data.Database.GetItem(itemuri);
         }
 
-      
+
+
+
+        public Type Type
+        {
+            get { return typeof(Sitecore.Data.Items.Item); }
+        }
     }
 }

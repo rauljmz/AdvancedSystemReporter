@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Linq;
-using Sitecore.Security.Domains;
+using ASR.Serialization;
+
 
 namespace ASR.Reports.Users
 {
     public class AllUsersScanner : ASR.Interface.BaseScanner
     {
-        public string DomainName { get; set; }
+        public string Domain { get; set; }
 
+        public AllUsersScanner()
+        {
+            Serialization.SerializatorsFactory.RegisterSerializator(new UserSerializator());
+        }
         public override ICollection Scan()
         {
-            return Domain.GetDomain(DomainName).GetUsers().ToArray();
+            return Sitecore.Security.Domains.Domain.GetDomain(Domain).GetUsers().ToArray();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace ASR.Reports.Presentation
 
         public PresentationScanner()
         {
-            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+            Serialization.SerializatorsFactory.RegisterSerializator(new Serialization.ItemSerializator());
         }
 
         public override ICollection Scan()

@@ -41,7 +41,7 @@ namespace ASR.Reports.Scanners
 
         public DatabaseScanner()
         {
-            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+            Serialization.SerializatorsFactory.RegisterSerializator( new Serialization.ItemSerializator());
         }
     }
 }

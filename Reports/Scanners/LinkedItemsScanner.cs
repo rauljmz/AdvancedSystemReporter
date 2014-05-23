@@ -19,7 +19,7 @@ namespace ASR.Reports.Scanners
 
         public LinkedItemsScanner()
         {
-            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+            Serialization.SerializatorsFactory.RegisterSerializator(new Serialization.ItemSerializator());
         }
 
         public override ICollection Scan()

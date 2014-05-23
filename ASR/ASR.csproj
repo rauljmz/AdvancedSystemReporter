@@ -132,6 +132,7 @@
     <Compile Include="Serialization\ItemSerializator.cs" />
     <Compile Include="Serialization\SerializatorsFactory.cs" />
     <Compile Include="Serialization\SerializedObject.cs" />
+    <Compile Include="Serialization\UserSerializator.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="sitecore\shell\download.aspx.cs">
       <DependentUpon>download.aspx</DependentUpon>

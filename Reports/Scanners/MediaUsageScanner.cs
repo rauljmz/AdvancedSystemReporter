@@ -33,7 +33,7 @@ namespace ASR.Reports.Scanners
 
         public MediaUsageScanner()
         {
-            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+            Serialization.SerializatorsFactory.RegisterSerializator( new Serialization.ItemSerializator());
         }
 
 		public override ICollection Scan()

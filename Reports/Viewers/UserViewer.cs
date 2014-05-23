@@ -1,9 +1,11 @@
 ﻿using ASR.Interface;
 using System.Linq;
+using System;
 
 namespace ASR.Reports.Users
 {
-    class UserViewer : ASR.Interface.BaseViewer
+    [Serializable]
+    public class UserViewer : ASR.Interface.BaseViewer
     {
         public override string[] AvailableColumns
         {

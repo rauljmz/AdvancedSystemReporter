@@ -7,6 +7,7 @@ using Sitecore.Web.UI.Sheer;
 using Sitecore.Data.Items;
 using Sitecore.Data;
 using Sitecore.Diagnostics;
+using System.Collections;
 
 namespace ASR
 {
@@ -97,6 +98,15 @@ namespace ASR
             replacement = replacement.Replace("$sc_today", DateTime.Today.ToString("yyyyMMddTHHmmss"));
             replacement = replacement.Replace("$sc_now", DateTime.Now.ToString("yyyyMMddTHHmmss"));
             return replacement;
+        }
+
+        public static IEnumerable<object> Select(this ICollection col, Func<object,object> f)
+        {
+            var enu = col.GetEnumerator();
+            while(enu.MoveNext())
+            {
+                yield return f(enu.Current);
+            }
         }
 
     }

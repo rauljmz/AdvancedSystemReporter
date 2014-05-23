@@ -14,7 +14,9 @@ namespace ASR.Reports.Scanners
         }
 
         public bool Approved { get; set; }
-        
+
+      
+
         public override System.Collections.ICollection Scan()
         {
             var results = base.Scan();

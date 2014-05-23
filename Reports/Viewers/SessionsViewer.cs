@@ -1,8 +1,10 @@
-﻿using ASR.Interface;
+﻿using System;
+using ASR.Interface;
 using Sitecore.Diagnostics;
 
 namespace ASR.Reports.Sessions
 {
+    [Serializable]
     public class SessionsViewer : BaseViewer
     {
         public override string[] AvailableColumns

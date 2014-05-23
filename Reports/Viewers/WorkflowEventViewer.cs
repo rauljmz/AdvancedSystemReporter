@@ -2,9 +2,11 @@
 using Sitecore.Data.Items;
 using ASR.Reports.Scanners;
 using ASR.Interface;
+using System;
 
 namespace ASR.Reports.Viewers
 {
+    [Serializable]
     public class WorkflowEventViewer : BaseViewer
     {
         #region properties

@@ -1,7 +1,9 @@
-﻿using ASR.Interface;
+﻿using System;
+using ASR.Interface;
 
 namespace ASR
 {
+    [Serializable]
 	public class Context
 	{
 		internal Context()

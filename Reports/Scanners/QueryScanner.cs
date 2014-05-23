@@ -22,6 +22,7 @@ namespace ASR.Reports.Items
 
         public string Query { get; set; }
 
+       
 
         public override ICollection Scan()
         {

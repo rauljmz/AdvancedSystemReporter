@@ -14,6 +14,7 @@ using Sitecore.Workflows;
 
 namespace ASR.Reports.Items
 {
+    [Serializable]
     public class ItemViewer : BaseViewer
     {
         #region Fields

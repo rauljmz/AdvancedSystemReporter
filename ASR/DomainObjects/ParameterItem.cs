@@ -7,6 +7,7 @@ using Sitecore.Web.UI.HtmlControls;
 
 namespace ASR.DomainObjects
 {
+    [Serializable]
     public class ParameterItem : BaseItem
     {
         public ParameterItem(Item innerItem)

@@ -31,6 +31,11 @@ namespace ASR.Reports.Scanners
 		}
 		public const string ROOT_PARAMETER = "root";
 
+        public MediaUsageScanner()
+        {
+            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+        }
+
 		public override ICollection Scan()
 		{
 			string rootParameter = base.getParameter(ROOT_PARAMETER);

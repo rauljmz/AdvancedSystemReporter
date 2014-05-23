@@ -128,6 +128,10 @@
     <Compile Include="Interface\DisplayElement.cs" />
     <Compile Include="Interface\Report.cs" />
     <Compile Include="ReportRunner.cs" />
+    <Compile Include="Serialization\ISerializator.cs" />
+    <Compile Include="Serialization\ItemSerializator.cs" />
+    <Compile Include="Serialization\SerializatorsFactory.cs" />
+    <Compile Include="Serialization\SerializedObject.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="sitecore\shell\download.aspx.cs">
       <DependentUpon>download.aspx</DependentUpon>

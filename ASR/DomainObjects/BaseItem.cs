@@ -15,7 +15,7 @@ namespace ASR.DomainObjects
             Name = innerItem.Name;
             ID = innerItem.ID;
             Icon = innerItem.Appearance.Icon;
-            Database = innerItem.Database;
+            DatabaseName = innerItem.Database.Name;
             Path = innerItem.Paths.FullPath;
             Uri = innerItem.Uri;
         }
@@ -26,7 +26,19 @@ namespace ASR.DomainObjects
 
         public string Icon { get; set; }
 
-        public Sitecore.Data.Database Database { get; set; }
+        public string DatabaseName { get; set; }
+
+        [NonSerialized]
+        private Sitecore.Data.Database _Database;
+        
+        
+        public Sitecore.Data.Database Database
+        {
+            get
+            {
+                return _Database ?? (_Database = Sitecore.Configuration.Factory.GetDatabase(DatabaseName));
+            }
+        }
 
         public string Path
         {

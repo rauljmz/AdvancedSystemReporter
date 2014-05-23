@@ -5,10 +5,11 @@ using Sitecore.Collections;
 using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Reflection;
+using System;
 
 namespace ASR.DomainObjects
 {
-    
+    [Serializable]
     public class CommandItem : BaseItem
     {
         public CommandItem(Item innerItem) : base(innerItem)

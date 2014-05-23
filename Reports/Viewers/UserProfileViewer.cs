@@ -5,6 +5,7 @@ using Sitecore.Security.Accounts;
 namespace ASR.Reports.Users
 {
     [Obsolete("Use UserViewer instead")]
+    [Serializable]
     public class UserProfileViewer : BaseViewer
     {
         public override string[] AvailableColumns

@@ -1,9 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using ASR.Interface;
 using Sitecore.Security.Accounts;
 
 namespace ASR.Reports.Roles
 {
+    [Serializable]
     public class RoleViewer : BaseViewer
     {
         public override string[] AvailableColumns

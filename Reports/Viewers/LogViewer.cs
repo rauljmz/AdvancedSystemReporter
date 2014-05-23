@@ -1,9 +1,11 @@
-﻿using ASR.DomainObjects;
+﻿using System;
+using ASR.DomainObjects;
 using ASR.Interface;
 using Sitecore.Diagnostics;
 
 namespace ASR.Reports.Logs
 {
+    [Serializable]
 	public class LogViewer : ASR.Interface.BaseViewer
 	{
 		private readonly string ICON_WARN = "Applications/32x32/warning.png";

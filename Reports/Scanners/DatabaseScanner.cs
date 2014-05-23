@@ -38,5 +38,10 @@ namespace ASR.Reports.Scanners
             var root = string.IsNullOrEmpty(Root) ? "/sitecore" : Root;
             return Database.GetItem(root);
         }
+
+        public DatabaseScanner()
+        {
+            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+        }
     }
 }

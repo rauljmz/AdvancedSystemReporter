@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ASR.DomainObjects
 {
+    [Serializable]
 	public class Column
 	{
 		private string _Name;

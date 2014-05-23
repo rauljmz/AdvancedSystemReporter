@@ -5,9 +5,11 @@ using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Data.Fields;
 using Sitecore.SecurityModel;
+using System;
 
 namespace ASR.Reports.Viewers
 {
+    [Serializable]
     public class AliasViewer : BaseViewer
     {
        

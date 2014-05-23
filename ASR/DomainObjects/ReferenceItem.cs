@@ -6,7 +6,7 @@ using Sitecore.Data.Items;
 
 namespace ASR.DomainObjects
 {
-	
+    [Serializable]
 	public class ReferenceItem : BaseItem
 	{
         private readonly string _currentuser;

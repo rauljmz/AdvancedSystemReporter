@@ -9,17 +9,18 @@ using ASR.DomainObjects;
 
 namespace ASR.Interface
 {
+    [Serializable]
 	public class Report
 	{
 		private Dictionary<string, FilterItem> filters;
 		private Dictionary<string, ScannerItem> scanners;
 		private Dictionary<string, ViewerItem> viewers;
 
-		// buffer for the result of the scanner
-		private ArrayList scannerResults;
+        // buffer for the result of the scanner
+        private List<object> scannerResults;
 
 		// buffer for filtered results i.e. scannerResults => Filter()
-		private ArrayList results;
+        private List<object> results;
 
 		IEnumerable<BaseViewer> _viewers;
 		public IEnumerable<BaseViewer> Viewers
@@ -45,9 +46,16 @@ namespace ASR.Interface
 			{
 				if (_displayElements == null)
 				{
-					var tmp = results.OfType<object>().DefaultIfEmpty().Select(IntializeDisplayElement);
-					tmp = Sort(tmp);
-					_displayElements = tmp.ToList();
+                    if (results.Any())
+                    {
+                        var tmp = results.Select<object,DisplayElement>(IntializeDisplayElement);
+                        tmp = Sort(tmp);
+                        _displayElements = tmp.ToList();
+                    }
+                    else
+                    {
+                        _displayElements = new List<DisplayElement>();
+                    }
 				}
 				return _displayElements;
 			}
@@ -117,7 +125,7 @@ namespace ASR.Interface
 			return null;
 		}
 
-		private DisplayElement IntializeDisplayElement(object resultItem)
+        private DisplayElement IntializeDisplayElement(object resultItem)
 		{
 			var dElement = new DisplayElement(resultItem);
 			foreach (var oViewer in Viewers)
@@ -206,27 +214,25 @@ namespace ASR.Interface
 		{
 			if (scannerResults == null)
 			{
-				scannerResults = new ArrayList();
+				scannerResults = new List<object>();
 				foreach (var scanner in scanners)
 				{
 					BaseScanner oScanner = BaseScanner.Create(scanner.Value.FullType, scanner.Value.ReplacedAttributes);
 					//TODO throw exception if null??
-					scannerResults.AddRange(oScanner.Scan());
+					scannerResults.AddRange(oScanner.Scan().Select(s=>Serialization.SerializatorsFactory.Serialize(s)));
 				}
 			}
-			Filter();			
-		}
 
-		/// <summary>
-		/// Filters the results. All filters are "and" so an item needs to pass all filters to appear on the report.
-		/// </summary>
-		public void Filter()
-		{
+        //    Filter	
+       
+       
 			IEnumerable<BaseFilter> oFilters = filters.Select(p => BaseFilter.Create(p.Value.FullType, p.Value.ReplacedAttributes)).ToList();
-			results = new ArrayList();
+            results = new List<object>() ;
 
-			foreach (var element in scannerResults)
+			foreach (var thing in scannerResults)
 			{
+                var serializedObject = thing as Serialization.SerializedObject;
+                var element = serializedObject != null ? serializedObject.Deserialize() : thing;
 				bool add = true;
 				foreach (var filter in oFilters)
 				{
@@ -239,7 +245,7 @@ namespace ASR.Interface
 				if (add)
 				{
 					Sitecore.Diagnostics.Assert.IsNotNull(element, "element is null ");
-					results.Add(element);
+					results.Add( serializedObject ?? element);
 				}
 			}
 		}
@@ -250,9 +256,7 @@ namespace ASR.Interface
 		/// <returns>All the results from running the report</returns>
 		public IEnumerable<DisplayElement> GetResultElements()
 		{
-			if (results == null)
-				Run();
-			return GetResultElements(0, results.Count);
+			return GetResultElements(0, int.MaxValue);
 		}
 
 		/// <summary>
@@ -261,10 +265,12 @@ namespace ASR.Interface
 		/// <param name="start">first result to return</param>
 		/// <param name="count">number of results to return</param>
 		/// <returns>Results of the report</returns>
-		public IEnumerable<DisplayElement> GetResultElements(int start, int count)
+		public IEnumerable<DisplayElement> GetResultElements(int start, int length)
 		{
+            if (results == null)
+            { Run(); }
+            var count = Math.Min(length,ResultsCount());
 			int end = System.Math.Min(start + count, ResultsCount());
-
 			return DisplayElements.Where((t, i) => (start <= i) && (i < end));
 		}
 

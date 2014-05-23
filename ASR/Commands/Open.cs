@@ -3,9 +3,11 @@ using Sitecore.Web.UI.Sheer;
 using ASR.DomainObjects;
 using Sitecore.Data.Items;
 using Sitecore.Data;
+using System;
 
 namespace ASR.Commands
 {
+    [Serializable]
     class Open : Command
     {
         public override void Execute(CommandContext context)

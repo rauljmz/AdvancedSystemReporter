@@ -7,6 +7,7 @@ using Sitecore.Diagnostics;
 
 namespace ASR.Interface
 {
+    [Serializable]
 	public abstract class BaseReportObject
 	{
 		public string Name { get; set; }

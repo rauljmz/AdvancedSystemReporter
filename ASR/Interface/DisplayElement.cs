@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ASR.Interface
 {
+    [Serializable]
     public class DisplayElement
     {
         private Dictionary<string,string> columns;                
@@ -10,7 +11,26 @@ namespace ASR.Interface
         /// <summary>
         /// Object returned by the scanner.
         /// </summary>
-        public object Element { get; set; }
+        private object SerializableElement;
+        public object Element
+        {
+            get
+            {
+                var serializationObject = SerializableElement as Serialization.SerializedObject;
+                return serializationObject != null ? serializationObject.Deserialize() : SerializableElement;
+            }
+            set
+            {
+                if (value.GetType().IsSerializable)
+                {
+                    SerializableElement = value;
+                }
+                else
+                {
+                    SerializableElement = Serialization.SerializatorsFactory.Serialize(value);
+                }
+            }
+        }
 
         public string Header { get; set; }
 

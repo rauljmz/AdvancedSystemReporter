@@ -2,6 +2,7 @@
 
 namespace ASR.Reports.Logs
 {
+    [Serializable]
     public class LogItem
     {
         public enum LogType { Info , Error, Audit, Warning };

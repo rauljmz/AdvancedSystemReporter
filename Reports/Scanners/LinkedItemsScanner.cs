@@ -17,6 +17,11 @@ namespace ASR.Reports.Scanners
 
         public string LanguageFallback { get; set; }
 
+        public LinkedItemsScanner()
+        {
+            Serialization.SerializatorsFactory.RegisterSerializator(typeof(Item), new Serialization.ItemSerializator());
+        }
+
         public override ICollection Scan()
         {
             var databasename = getParameter(DB_PARAMETER);

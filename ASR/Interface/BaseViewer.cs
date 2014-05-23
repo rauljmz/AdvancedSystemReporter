@@ -9,6 +9,7 @@ using System.Xml;
 
 namespace ASR.Interface
 {
+    [Serializable]
 	public abstract class BaseViewer : BaseReportObject
 	{
 		#region Abstract methods

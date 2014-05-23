@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace ASR.Reports.Users
 {
+    [Serializable]
     public class UserRolesViewer : BaseViewer
     {
         public override void Display(DisplayElement dElement)

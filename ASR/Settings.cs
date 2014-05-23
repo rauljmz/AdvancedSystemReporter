@@ -19,18 +19,7 @@
 
 		protected Settings() { }
 
-    ///// <summary>
-    ///// Gets the configuration node.
-    ///// </summary>
-    ///// <value>The configuration node.</value>
-    //public string ConfigurationNodes
-    //{
-    //  get
-    //  {
-    //    return "/sitecore/system/Modules/ASR";
-    //  }
-    //}
-
+  
 		/// <summary>
 		/// Gets the configuration database.
 		/// </summary>

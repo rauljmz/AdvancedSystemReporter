@@ -68,11 +68,24 @@ namespace ASR.Interface
                 var key_values = param.Split(new char[] {'='}, 2);
                 
                 var propertyinfo = this.GetType().GetProperty(key_values[0],
-                                                              BindingFlags.NonPublic | BindingFlags.Public |
-                                                              BindingFlags.Instance);
+                       BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
                 if(propertyinfo != null)
                 {
-                    Sitecore.Reflection.ReflectionUtil.SetProperty(this,propertyinfo,key_values[1]);
+                    object value;
+                    if (propertyinfo.PropertyType == typeof(bool))
+                    {
+                        value = key_values[1] == "1";
+                    }
+                    else if (propertyinfo.PropertyType == typeof(int))
+                    {
+                        value = int.Parse(key_values[1]);
+                    }
+                    else
+                    {
+                        value = key_values[1];
+                    }
+                    
+                    Sitecore.Reflection.ReflectionUtil.SetProperty(this,propertyinfo,value);
                 }
                 else
                 {

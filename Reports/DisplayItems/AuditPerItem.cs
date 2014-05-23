@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sitecore.Data;
@@ -15,10 +16,6 @@ namespace ASR.Reports.Items
 		{
 			get
 			{
-                //if (string.IsNullOrEmpty(Deep))
-                //{
-                //    _deep = getParameter("deep");
-                //}
 				return (Mode)Deep;
 			}
 		}
@@ -36,18 +33,12 @@ namespace ASR.Reports.Items
 			}
 		}
 
-        public string _allversions;
+
 
         public bool SearchAllVersions
-        {            
-            get
-            {
-                if (string.IsNullOrEmpty(_allversions))
-                {
-                    _allversions = getParameter("allversions");
-                }
-                return _allversions == "1";
-            }
+        {
+            get;
+            set;
         }
 
 		private Database _db;

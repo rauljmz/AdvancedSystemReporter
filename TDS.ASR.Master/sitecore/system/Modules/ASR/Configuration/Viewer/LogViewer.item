@@ -12,7 +12,7 @@ templatekey: Viewer
 ----version----
 language: en
 version: 1
-revision: 8c3a3b6c-a6da-4e83-83f3-cc7b58efc656
+revision: 7cbb7bcf-5a8a-4f40-ae68-f641231f47f9
 
 ----field----
 field: {6FB5BEBA-ECD8-4B56-B20A-BF292193D491}
@@ -34,14 +34,14 @@ name: Attributes
 key: attributes
 content-length: 33
 
-Sort=Date,DESC,DateTime&Time,DESC
+sort=Date,DESC,DateTime&Time,DESC
 ----field----
 field: {2FE97449-F425-4789-AB93-C246BFA1749B}
 name: Columns
 key: columns
 content-length: 190
 
-<Columns><Column name="type">Type</Column><Column name="date">Date</Column><Column name="user">User</Column><Column name="verb">Verb</Column><Column name="message">Message</Column></Columns>
+<Columns><Column name="type">Type</Column><Column name="date">Date</Column><Column name="message">Message</Column><Column name="user">User</Column><Column name="verb">Verb</Column></Columns>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8c3a3b6c-a6da-4e83-83f3-cc7b58efc656
+7cbb7bcf-5a8a-4f40-ae68-f641231f47f9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130205T222812:634957000929329355
+20140523T150858:635364545382912546
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

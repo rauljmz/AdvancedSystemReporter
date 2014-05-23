@@ -1,7 +1,9 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace ASR.Reports.Logs
 {
+    [Serializable]
     public class AuditItem : LogItem
     {
         

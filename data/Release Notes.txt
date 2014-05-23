@@ -1,5 +1,10 @@
 Advanced System Reporter
 ------------------------
+v.1.7.0
+- now supports running with SqlServer session. All Scanners, Viewers and Filters, need to be marked as [Serializable]. Scanners ideally should produce [Serializable] objects, if not, a class implementing ASR.Serialization.ISerializator should be created and registered with the ASR.Serialization.SerializationFactory. Serializators for users and items are already provided. 
+- fixed population of properties in scanners/filters/viewers Properties of type bool and int are converted correctly
+- FIX some viewer items had no columns defined
+
 v.1.6.1
 - fixed ItemViewer would not display field values for Item Clones
 

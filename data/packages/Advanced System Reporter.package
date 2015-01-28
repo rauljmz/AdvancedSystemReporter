@@ -1,9 +1,9 @@
-<project site="asrtest" format="Zip Package">
+<project site="traincore" format="Zip Package" targetfilefolder="wwwroot">
   <Metadata>
     <metadata>
       <PackageName>Advanced System Reporter</PackageName>
       <Author>Alenka Caserman / Raul Jimenez / Chris Gamblen</Author>
-      <Version>1.6</Version>
+      <Version>1.7</Version>
       <Revision />
       <License />
       <Comment />
@@ -22,7 +22,6 @@ If you want to use the Email functionality make sure the default mail settings i
     <xitems>
       <Entries>
         <x-item>/core/sitecore/layout/Layouts/Applications/ASR/{053EE0BD-DBEA-4CF1-B07B-68C3F0F7E599}/invariant/0</x-item>
-        <x-item>/core/sitecore/content/Documents and settings/All users/Start menu/Programs/Advanced System Reporter/{2D9047A7-1395-43C1-BD5E-CE0091330E09}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Tasks/Schedules/Email Reports schedule/{F7283EB0-515E-4CFC-B851-B398DFB9206C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Tasks/Commands/Email Reports/{34DFE48A-8B58-4E27-9199-E72A855D8237}/invariant/0</x-item>
         <x-item>/core/sitecore/content/Applications/Advanced System Reporter/{605C3AD5-4D6E-4297-98C9-7638BE5A82EA}/invariant/0</x-item>
@@ -245,6 +244,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Renderings/{E1F6E67B-BDAA-4331-8214-7939AFA045A3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Stale Workflow Items/{18E9AADC-A889-4758-8F11-EA77D1571727}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Validation Errors/{202B2692-83F1-4C98-8BB4-99A6453C8E43}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Documents and settings/All users/Start menu/Left/ASR/{A9F5E3D2-8EA3-4973-8FAB-73968AA586DC}/invariant/0</x-item>
       </Entries>
       <SkipVersions>False</SkipVersions>
       <Converter>
@@ -267,7 +267,6 @@ If you want to use the Email functionality make sure the default mail settings i
     </xitems>
     <xfiles>
       <Entries>
-        <x-item>/App_Config/Include/ASR.config</x-item>
         <x-item>/bin/ASR.dll</x-item>
         <x-item>/bin/ASR.Reports.dll</x-item>
         <x-item>/sitecore modules/Shell/ASR</x-item>
@@ -277,6 +276,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/sitecore modules/Shell/ASR/Controls/ItemSelectorDialog.xml</x-item>
         <x-item>/sitecore modules/Shell/ASR/ASR.xml</x-item>
         <x-item>/sitecore modules/Shell/ASR/editablecombo.js</x-item>
+        <x-item>/App_Config/Include/ASR/ASR.config</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>

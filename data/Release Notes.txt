@@ -1,5 +1,8 @@
 Advanced System Reporter
 ------------------------
+v.1.7.0
+- compatible with Sitecore 8 - minor styling fixes
+
 v.1.6.1
 - fixed ItemViewer would not display field values for Item Clones
 

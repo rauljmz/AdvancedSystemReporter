@@ -143,18 +143,18 @@
     <Compile Include="DomainObjects\ReferenceItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sitecore modules\Shell\ASR\ASR.xml">
+    <CopyFileToWebroot Include="sitecore modules\Shell\ASR\ASR.xml">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Controls\Column.xml" />
-    <Content Include="Controls\ColumnEditor.xml">
+    </CopyFileToWebroot>
+    <CopyFileToWebroot Include="sitecore modules\Shell\ASR\Controls\Column.xml" />
+    <CopyFileToWebroot Include="sitecore modules\Shell\ASR\Controls\ColumnEditor.xml">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Controls\ItemSelectorDialog.xml" />
-    <Content Include="sitecore modules\Shell\ASR\editablecombo.js" />
-    <Content Include="sitecore\shell\download.aspx">
+    </CopyFileToWebroot>
+    <CopyFileToWebroot Include="sitecore modules\Shell\ASR\Controls\ItemSelectorDialog.xml" />
+    <CopyFileToWebroot Include="sitecore modules\Shell\ASR\editablecombo.js" />
+    <CopyFileToWebroot Include="sitecore\shell\download.aspx">
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
+    </CopyFileToWebroot>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -174,8 +174,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\ASR\ASR.config" />
-    <None Include="App_Config\Include\ASR\ASR.Download.config" />
+    <CopyFileToWebroot Include="App_Config\Include\ASR\ASR.config" />
+    <CopyFileToWebroot Include="App_Config\Include\ASR\ASR.Download.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -186,16 +186,11 @@
   <Target Name="AfterBuild">
     <CallTarget Targets="CopyFilesToSitecoreWebroot" />
   </Target>
-  <ItemGroup>
-    <ConfigFiles Include="App_Config\Include\**\*.*" />
-    <SitecoreShellFiles Include="sitecore\shell\*.aspx" />
-    <SitecoreModulesFiles Include="sitecore modules\**\*.*" />
-  </ItemGroup>
-  <Target Name="CopyFilesToSitecoreWebroot">
+  
+   <Target Name="CopyFilesToSitecoreWebroot">
     <Message Text="$(ProjectName) - Copying files to $(SitecoreWebRoot)" Importance="High" />
-    <Copy DestinationFolder="$(SitecoreWebRoot)\App_Config\Include\%(RecursiveDir)" SkipUnchangedFiles="true" SourceFiles="@(ConfigFiles)" />
-    <Copy DestinationFolder="$(SitecoreWebRoot)\sitecore\shell" SkipUnchangedFiles="true" SourceFiles="@(SitecoreShellFiles)" />
-    <Copy DestinationFolder="$(SitecoreWebRoot)\sitecore modules\%(RecursiveDir)" SkipUnchangedFiles="true" SourceFiles="@(SitecoreModulesFiles)" />
+    
+    <Copy DestinationFiles="@(CopyFileToWebroot->'$(SitecoreWebRoot)\%(RelativeDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" SourceFiles="@(CopyFileToWebroot)" />
     <Copy DestinationFolder="$(SitecoreWebRoot)\bin\" SkipUnchangedFiles="true" SourceFiles="$(TargetPath)" />
   </Target>
 </Project>

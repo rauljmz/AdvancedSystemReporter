@@ -9,7 +9,7 @@ namespace ASR.Controls
     {
         public LinkButton()
         {
-            
+            Class = string.Empty;
             Style.Add("vertical-align", "bottom");
         }
         protected override void DoRender(System.Web.UI.HtmlTextWriter output)

@@ -24,6 +24,9 @@ namespace ASR.Controls
 			e = new Edit();
 			e.ReadOnly = true;
 			e.Width = new System.Web.UI.WebControls.Unit(60, System.Web.UI.WebControls.UnitType.Percentage);
+            e.Float = "left";
+            e.Style.Add("margin-right", "10px");
+            e.Style.Add("margin-bottom", "20px");
 
 			Literal l = new Literal();
 			l.Text = "&nbsp;&nbsp;";

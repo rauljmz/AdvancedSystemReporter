@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ASR.Reports</RootNamespace>
     <AssemblyName>ASR.Reports</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -33,6 +33,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,9 +54,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-     <Reference Include="Sitecore.Kernel">
+    <Reference Include="Sitecore.Kernel">
       <HintPath>$(SitecoreBinariesPath)$(SitecoreVersion)\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -173,7 +176,19 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-<!--   <PropertyGroup>
+  <Target Name="AfterBuild">
+    <CallTarget Targets="CopyFilesToSitecoreWebroot"/>
+  </Target>
+
+
+
+  <Target Name="CopyFilesToSitecoreWebroot">
+    <Message Text="$(ProjectName) - Copying files to $(SitecoreWebRoot)" Importance="High"/>
+
+    <Copy DestinationFolder="$(SitecoreWebRoot)\bin\" SkipUnchangedFiles="true" SourceFiles="$(TargetPath)"/>
+
+  </Target>
+  <!--   <PropertyGroup>
     <PostBuildEvent>xcopy /y /s "$(TargetPath)" "$(SitecoreWebRoot)\bin\"</PostBuildEvent>
   </PropertyGroup> -->
 </Project>

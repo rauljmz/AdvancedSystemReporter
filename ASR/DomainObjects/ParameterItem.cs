@@ -102,6 +102,7 @@ namespace ASR.DomainObjects
             else if (this.Type == "Dropdown")
             {
                 Combobox c = new Combobox();
+                c.Width = System.Web.UI.WebControls.Unit.Parse("85%");
                 foreach (var value in this.PossibleValues())
                 {
                     ListItem li = new ListItem();

@@ -1,0 +1,100 @@
+----item----
+version: 1
+id: {A9F5E3D2-8EA3-4973-8FAB-73968AA586DC}
+database: core
+path: /sitecore/content/Documents and settings/All users/Start menu/Left/ASR
+parent: {EBA3991F-8D26-41B1-97E5-090D55020AA0}
+name: ASR
+master: {5E8CFCF9-CEF2-4BDB-9E35-219C50184066}
+template: {72450C9C-98C4-4117-88B7-573110C7E0C0}
+templatekey: Application shortcut
+
+----field----
+field: {8A1AC797-0304-4C50-AAAC-4D9DBBFF435F}
+name: Application
+key: application
+content-length: 192
+
+<link text="" linktype="internal" url="/Applications/Advanced System Reporter" anchor="" title="" class="" querystring="" target="Active Browser" id="{605C3AD5-4D6E-4297-98C9-7638BE5A82EA}" />
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 33
+
+WordProcessing/16x16/search_b.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: 79f1255a-9bb4-4d31-9419-2998f6a6a1dd
+
+----field----
+field: {C032DB76-CC34-4F8F-BE2D-D2FB35237AAB}
+name: Display name
+key: display name
+content-length: 3
+
+ASR
+----field----
+field: {BB865E67-0BE3-49D8-B8BD-1DB4B34AB2E3}
+name: Tool tip
+key: tool tip
+content-length: 14
+
+Useful reports
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20150128T111520Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+79f1255a-9bb4-4d31-9419-2998f6a6a1dd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 35
+
+20150128T115739:635580430596034462Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

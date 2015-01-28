@@ -36,7 +36,7 @@ namespace ASR.Reports.Scanners
         protected Item GetRootItem()
         {
             var root = string.IsNullOrEmpty(Root) ? "/sitecore" : Root;
-            return Database.GetItem(root);
+            return Database.GetItem(root) ?? Database.GetRootItem();
         }
     }
 }

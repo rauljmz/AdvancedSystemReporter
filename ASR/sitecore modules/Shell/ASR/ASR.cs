@@ -183,7 +183,7 @@ namespace ASR.App
            
             var panel = new Panel();
             panel.Style.Add("border", "none");
-            panel.Style.Add("margin-bottom", "10px");
+       
 
             var literal = new Literal
                 {
@@ -214,6 +214,7 @@ namespace ASR.App
 
                 i.Style.Add("display", "block");
                 i.Style.Add("margin-top", "5px");
+                i.Style.Add("margin-bottom", "20px");
                 i.Value = input.ID;
                 i.ID = Control.GetUniqueID("params_" + pi.Name + "_");
                 i.Controls.Add(l);

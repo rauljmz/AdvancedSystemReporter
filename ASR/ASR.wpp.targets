@@ -1,0 +1,11 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target DependsOn="CopyFilesToSitecoreWebRoot" Name="BeforeBuild"/>
+	<Target Name="CopyFilesToSitecoreWebroot">
+		<Message Text="Copying files to $(SitecoreWebRoot)" Importance="High"/>
+		<Copy DestinationFolder="$(SitecoreWebRoot)App_Config\Include" SkipUnchangedFiles="true" SourceFiles="App_Config\Include\**.*"/>
+		<Copy DestinationFolder="$(SitecoreWebRoot)\sitecore\shell" SkipUnchangedFiles="true" SourceFiles="sitecore\shell\*.aspx"/>
+		<Copy DestinationFolder="$(SitecoreWebRoot)\sitecore modules\Shell\ASR\" SkipUnchangedFiles="true" SourceFiles="*.xml"/>
+		<Copy DestinationFolder="$(SitecoreWebRoot)\bin\" SkipUnchangedFiles="true" SourceFiles="$(TargetPath)"/>
+		<Copy DestinationFolder="$(SitecoreWebRoot)\sitecore modules\Shell\ASR\" SkipUnchangedFiles="true" SourceFiles="*.js"/>
+	</Target>
+</Project>

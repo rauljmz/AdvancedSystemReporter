@@ -55,11 +55,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Client">
-      <HintPath>..\lib\v$(SitecoreVersion)\Sitecore.Client.dll</HintPath>
+      <HintPath>$(SitecoreBinariesPath)$(SitecoreVersion)\Sitecore.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\lib\v$(SitecoreVersion)\Sitecore.Kernel.dll</HintPath>
+      <HintPath>$(SitecoreBinariesPath)$(SitecoreVersion)\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -183,15 +183,5 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <PostBuildEvent>xcopy /y /s "$(ProjectDir)ASR.config" "$(SitecoreWebRoot)\App_Config\Include\"
-xcopy /y /s "$(ProjectDir)sitecore\shell\*.aspx" "$(SitecoreWebRoot)\sitecore\shell\"
-xcopy /y /s "$(ProjectDir)*.xml" "$(SitecoreWebRoot)\sitecore modules\Shell\ASR\"
-xcopy /y /s "$(TargetPath)" "$(SitecoreWebRoot)\bin\"
-xcopy /y/s "$(SolutionDir)data\packages\Advanced System Reporter.xml" "$(SitecoreWebRoot)"\..\data\packages
-xcopy /y/s "$(ProjectDir)*.js" "$(SitecoreWebRoot)\sitecore modules\Shell\ASR\"</PostBuildEvent>
-  </PropertyGroup>
+-->
 </Project>

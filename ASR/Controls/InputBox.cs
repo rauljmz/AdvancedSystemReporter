@@ -12,7 +12,7 @@ namespace ASR.Controls
     {
         protected override void DoRender(System.Web.UI.HtmlTextWriter output)
         {
-            this.Attributes["placeholder"] = Translate.Text(this.Placeholder);
+            //this.Attributes["placeholder"] = Translate.Text(this.Placeholder);
             string type = this.Password ? " type=\"password\"" : (this.Hidden ? " type=\"hidden\"" : "");
             this.SetWidthAndHeightStyle();
             output.Write(string.Concat("<input id='",

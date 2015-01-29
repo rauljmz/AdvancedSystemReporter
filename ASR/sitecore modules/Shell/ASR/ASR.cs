@@ -214,7 +214,15 @@ namespace ASR.App
 
                 i.Style.Add("display", "block");
                 i.Style.Add("margin-top", "5px");
-                i.Style.Add("margin-bottom", "20px");
+                if (input is ASR.Controls.DateTimePicker)
+                {
+                    i.Style.Add("margin-bottom", "30px");
+                }
+                else
+                {
+                    i.Style.Add("margin-bottom", "20px");
+                }
+                
                 i.Value = input.ID;
                 i.ID = Control.GetUniqueID("params_" + pi.Name + "_");
                 i.Controls.Add(l);

@@ -25,7 +25,7 @@ namespace ASR.Controls
 				{
 					Value = args.Result;
 
-					Sitecore.Context.ClientPage.ClientResponse.Refresh(this.Parent);
+					Sitecore.Context.ClientPage.ClientResponse.Refresh(this);
 				}
 			}
 		}

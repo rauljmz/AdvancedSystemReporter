@@ -21,18 +21,21 @@ namespace ASR.Controls
 		public ItemSelector()
 			: base()
 		{
-			e = new Edit();
+            e = new InputBox();
 			e.ReadOnly = true;
 			e.Width = new System.Web.UI.WebControls.Unit(60, System.Web.UI.WebControls.UnitType.Percentage);
             e.Float = "left";
             e.Style.Add("margin-right", "10px");
             e.Style.Add("margin-bottom", "20px");
+            e.Attributes.Add("id", e.ID);
+            e.ID = Control.GetUniqueID("input");
+            this.ID = e.ID;
 
 			Literal l = new Literal();
 			l.Text = "&nbsp;&nbsp;";
 			b = new Button();
 			b.Header = "select...";
-
+           
 			this.Controls.Add(e);
 			this.Controls.Add(l);
 			this.Controls.Add(b);
@@ -96,7 +99,7 @@ namespace ASR.Controls
 					e.Value = ResultDisplay(value);
 					string resultToStore = ResultValue(value);
 					base.SetViewStateString("Value", resultToStore);
-					SheerResponse.SetAttribute(e.ID, "value", resultToStore);
+					SheerResponse.SetAttribute(e.ID, "value", e.Value);
 					base.Attributes["value"] = resultToStore;
 				}
 			}
@@ -132,7 +135,7 @@ namespace ASR.Controls
 
 					Value = args.Result;
 
-					Sitecore.Context.ClientPage.ClientResponse.Refresh(this.Parent);
+					Sitecore.Context.ClientPage.ClientResponse.Refresh(this);
 				}
 			}
 		}

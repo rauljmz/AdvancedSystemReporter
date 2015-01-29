@@ -102,6 +102,7 @@
     <Compile Include="Controls\ColumnsField.cs" />
     <Compile Include="Controls\CommandsPanel.cs" />
     <Compile Include="Controls\DateTimePicker.cs" />
+    <Compile Include="Controls\InputBox.cs" />
     <Compile Include="Controls\ItemSelector.cs" />
     <Compile Include="Controls\ItemSelectorDialog.cs" />
     <Compile Include="Controls\LinkButton.cs" />
@@ -186,10 +187,8 @@
   <Target Name="AfterBuild">
     <CallTarget Targets="CopyFilesToSitecoreWebroot" />
   </Target>
-  
-   <Target Name="CopyFilesToSitecoreWebroot">
+  <Target Name="CopyFilesToSitecoreWebroot">
     <Message Text="$(ProjectName) - Copying files to $(SitecoreWebRoot)" Importance="High" />
-    
     <Copy DestinationFiles="@(CopyFileToWebroot->'$(SitecoreWebRoot)\%(RelativeDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" SourceFiles="@(CopyFileToWebroot)" />
     <Copy DestinationFolder="$(SitecoreWebRoot)\bin\" SkipUnchangedFiles="true" SourceFiles="$(TargetPath)" />
   </Target>

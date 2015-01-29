@@ -98,6 +98,7 @@ namespace ASR.DomainObjects
             {
                 input = new Edit();
                 input.ID = Control.GetUniqueID("input");
+                input.Width = System.Web.UI.WebControls.Unit.Parse("85%");
             }
             else if (this.Type == "Dropdown")
             {

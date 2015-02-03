@@ -3,7 +3,7 @@
     <metadata>
       <PackageName>Advanced System Reporter</PackageName>
       <Author>Alenka Caserman / Raul Jimenez / Chris Gamblen</Author>
-      <Version>1.7</Version>
+      <Version>1.7.1</Version>
       <Revision />
       <License />
       <Comment />
@@ -100,6 +100,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Ribbon/Home/Export/Excel/{E8641FF5-C86F-43DB-B312-CF2273B2F5BB}/invariant/0</x-item>
         <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Ribbon/Home/Export/XML/{D7DC927B-755A-4BCA-ADB1-71771792F042}/invariant/0</x-item>
         <x-item>/core/sitecore/content/Applications/Advanced System Reporter/Ribbon/Home/Commands/CommandsPanel/{F1D16A01-2C56-4AE1-924B-D7F69B4B952F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Documents and settings/All users/Start menu/Left/ASR/{A9F5E3D2-8EA3-4973-8FAB-73968AA586DC}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/{5BA3F3F4-E6B7-4D8A-B3CB-2FA7790B82B4}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/{30BB56D2-4F1E-4ECD-B7A6-D32A902DD8E5}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/{F7BFC9AF-BCB8-4DA2-8BF1-1186177B1B9C}/invariant/0</x-item>
@@ -116,6 +117,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Rename/{6D45C5C2-6A37-462C-A021-2568EABA3FB9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/TrimVersions/{6A3F1258-AD76-4FC7-80C9-D2903E46BF11}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Commands/Unlock/{586CB36D-FDCB-4FBB-8766-B5C4B810191B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Any Field Contains Token/{AFFAF9D7-51A4-48C5-A231-FDF76664FBAE}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Audit/{871EA049-506C-4B4B-9CC2-B22A4EEA5B75}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Contains Broken Links/{D0171559-7E78-4D8F-8D9F-7765AAB58D4C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Filters/Created between/{27D07C2B-F354-46F7-88F9-BE30D4475300}/invariant/0</x-item>
@@ -147,6 +149,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/AgeISO/{F01E0EA9-FC8B-4854-996E-3D37F0E1BC2C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Database/{004A4780-339A-43E7-88A0-E422EB401E26}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Date/{0DAED923-E1EE-4F78-B66F-B036A1A03653}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/DomainName/{ADCEE04A-3CA0-44D9-86BD-2E7090DE952C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Field/{5C52A04A-D5C0-4099-97DD-CCD5677FF21B}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/FromDate/{CB5076CB-80CA-4B82-A17A-D64B0187ADA3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/MediaRoot/{5A5D9AD2-E53F-41AA-A6DF-608E34EF5092}/invariant/0</x-item>
@@ -188,8 +191,10 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Verb/Templates/{B7886DD3-1DEC-41F9-A199-CDC547283AB6}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/all versions/{95652D2F-04A7-4952-9EC8-ACDE41686C3C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Parameters/Versions/only current version/{B5E750A4-A70D-4719-81D8-C483DDCE8554}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Aliases/{0751B146-851C-4766-88D2-CE00AE26961A}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All items/{ADC1E4E4-541B-45B8-BF65-57D4B02008F4}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Publishable Items/{3D7FA1E3-847C-4604-8B61-E2134408F8FA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Roles/{416319AC-3F48-49A6-9003-7C8CAE4D57C0}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/All Users/{2EF22969-80E8-4335-9E0C-17F5E49D2049}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/Audit/{DBF19A29-D85B-4FE2-8EA9-97533AB5EB2A}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Scanners/AuditPerItem/{9F07D197-CF56-4814-9345-C030DECE0FED}/invariant/0</x-item>
@@ -213,15 +218,21 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Alias/{849E583C-C8AD-41CF-BDE9-8D68598623F3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Item Workflow Information/{E3E76543-6FDA-40D7-8C21-4FF98A2B11D9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemBasic/{965F8E6F-9002-46EA-99A3-801E95F12BF1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemOwner/{0F5EE297-6E22-4AC4-BC71-57DBE4C32CA3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemSecurity/{3AB1FBD3-B6CE-4E8D-B3DF-5BEC8EECF259}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/ItemViewer/{F28FC608-581E-41F5-BA49-14D4151A854C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LinkedField/{E680B66D-C4FE-4B08-A8F5-438BE8860841}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer/{AF561ED2-A768-40D4-8517-1A8368368F0F}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/LogViewer no sorting/{D6530D08-599A-4D5D-B2AD-4437A8345EC9}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Media Viewer/{2B820570-CB3F-4644-9C04-2709BF0686BE}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Number Of Versions/{6D6D4AC1-31D6-407E-9039-7A7709ACAFC1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/Role Viewer/{3B501A9B-6207-41E8-94EC-E85A3D0FA57E}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/SessionsViewer/{D1E7820D-8097-4561-B355-0B4498A02B80}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Profile Viewer/{630695F7-4CCE-47DA-A770-3FED728BDCEB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Roles Viewer/{34B805E1-DA24-43FB-9598-4800422EC799}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/User Viewer/{9B7B7673-0F9B-418A-BB05-535E5D6E959C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Configuration/Viewer/WorkflowEventViewer/{175E396A-72E1-48EA-9AA6-CC3CF45A7419}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Active Aliases/{4CD235C1-28AF-43D7-94A4-BD72789A9152}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Aliases/{4F054B13-4156-4116-88C3-64FAF6D78AB0}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Audit/{C463282D-332D-4E65-AA05-5F85E3EA6B7C}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Broken Links/{339D3839-4805-4AF9-ACF9-DB6AE011B83F}/invariant/0</x-item>
@@ -229,6 +240,7 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Item History/{A4F223AA-E706-4AAE-AD0C-83E894E20A74}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Invalid Names/{435277B2-CFC0-4D2F-8B73-ADECFF1C076D}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Security for an account/{E09317B2-5AEE-438B-B451-FCCFFFCB98F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Items with Tokens in Fields/{4270CC77-3632-43AE-A89A-4600A5AF4C93}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Links/{D54D5F8B-4DBE-4D43-8D1E-405C138EC0CD}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Locked Items/{216DE2A0-4849-44F2-BF1E-85F593AB2B02}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Logged errors/{05F200B8-27F0-4B11-8FDB-088BE6554782}/invariant/0</x-item>
@@ -242,9 +254,10 @@ If you want to use the Email functionality make sure the default mail settings i
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Recently Modified/{FE9ABA7F-0649-4072-B7A1-8DE5E84CAEB3}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Regex Item Searcher/{873BC162-F4E0-4C7D-BF8D-7DF38AC975CE}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Renderings/{E1F6E67B-BDAA-4331-8214-7939AFA045A3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Roles/{8FD7E458-7987-4E2B-A366-9AD429D9BDA0}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Stale Workflow Items/{18E9AADC-A889-4758-8F11-EA77D1571727}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/ASR/Reports/Users/{C577A874-9DAA-4C3A-A50D-A8A2706046D0}/invariant/0</x-item>
         <x-item>/master/sitecore/system/Modules/ASR/Reports/Validation Errors/{202B2692-83F1-4C98-8BB4-99A6453C8E43}/invariant/0</x-item>
-        <x-item>/core/sitecore/content/Documents and settings/All users/Start menu/Left/ASR/{A9F5E3D2-8EA3-4973-8FAB-73968AA586DC}/invariant/0</x-item>
       </Entries>
       <SkipVersions>False</SkipVersions>
       <Converter>

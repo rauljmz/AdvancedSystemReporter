@@ -101,7 +101,16 @@ namespace ASR.Reports.Items
                 if (!dElement.HasColumn(column.Header))
                 {
                     var text = getColumnText(column.Name, itemElement);
-                    dElement.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
+                    if (text.StartsWith("|"))
+                    {
+                        var splitvalues = text.Substring(1).Split('|');
+
+                        dElement.AddColumn(column.Header, splitvalues[0],splitvalues[1]);
+                    }
+                    else
+                    {
+                        dElement.AddColumn(column.Header, string.IsNullOrEmpty(text) ? itemElement[column.Name] : text);
+                    }
                 }
             }
             dElement.Icon = itemElement.Appearance.Icon;
@@ -180,18 +189,24 @@ namespace ASR.Reports.Items
         protected virtual string formatDateField(Item item, ID fieldID)
         {
             DateField field = item.Fields[fieldID];
-            if (field != null && !String.IsNullOrEmpty(field.Value))
-            {
+
+            if (field == null && String.IsNullOrEmpty(field.Value)) return string.Empty;
+
+            var formattingstring = "|{0}|{1}";
+            string formattedvalue; 
                 var dateTimeFormatInfo = CultureInfo.CurrentUICulture.DateTimeFormat;
 
                 var format = GetDateFormat(dateTimeFormatInfo.ShortDatePattern);
 
                 if (field.InnerField.TypeKey == "datetime")
-                    return field.DateTime.ToString(string.Concat(format, " ", dateTimeFormatInfo.ShortTimePattern));
+                     formattedvalue = 
+                        field.DateTime.ToString(string.Concat(format, " ", dateTimeFormatInfo.ShortTimePattern));
                 else
-                    return field.DateTime.ToString(format);
-            }
-            return string.Empty;
+                    formattedvalue = field.DateTime.ToString(format);
+
+                return string.Format(formattingstring, formattedvalue, item[fieldID]);
+
+          
         }
 
         protected virtual string getColumnText(string name, Item itemElement)

@@ -21,6 +21,9 @@ namespace ASR.Interface
 		// buffer for filtered results i.e. scannerResults => Filter()
 		private ArrayList results;
 
+        //buffer for displayelements
+        
+
 		IEnumerable<BaseViewer> _viewers;
 		public IEnumerable<BaseViewer> Viewers
 		{
@@ -34,25 +37,28 @@ namespace ASR.Interface
 			}
 		}
 
-		private List<DisplayElement> _displayElements;
-		/// <summary>
-		/// Gets or sets the display elements.
-		/// </summary>
-		/// <value>The display elements.</value>
-		public List<DisplayElement> DisplayElements
+        private DisplayElement[] displayelements;
+		public IEnumerable<DisplayElement> DisplayElements (int start = 0, int count = int.MaxValue)
 		{
-			get
-			{
-				if (_displayElements == null)
-				{
-					var tmp = results.OfType<object>().DefaultIfEmpty().Select(IntializeDisplayElement);
-					tmp = Sort(tmp);
-					_displayElements = tmp.ToList();
-				}
-				return _displayElements;
-			}
-			set { _displayElements = value; }
+
+            count = Math.Min(count, results.Count - start);
+            if (displayelements == null)
+            {
+                var tmp = results
+                    .OfType<object>()
+                    .DefaultIfEmpty()
+                    .Select(IntializeDisplayElement);
+                tmp = Sort(tmp);
+                displayelements = tmp.ToArray();
+            }
+            return displayelements.Skip(start).Take(count);
 		}
+
+        public void FlushDisplayElements()
+        {
+            displayelements = null;
+        }
+
 
 		private IEnumerable<DisplayElement> Sort(IEnumerable<DisplayElement> tmp)
 		{
@@ -69,27 +75,27 @@ namespace ASR.Interface
             foreach (string columnName in SortColumns.Keys)
             {
                 Func<DisplayElement, object> columnValue = null;
-                string sortOptions = SortColumns[columnName];
+                var sortOptions = SortColumns[columnName];
                 // need to copy the column name, or it executes against the wrong column when we actually do the sort
                 string copyOfColumnName = columnName;
 
-                // sort datetime values separately
-                if (sortOptions.Contains("DateTime"))
-                {
-                    columnValue = t => ParseDate(t.GetColumnValue(copyOfColumnName));
-                }
-                else
-                {
-                    columnValue = t => t.GetColumnValue(copyOfColumnName);
-                }
+                //// sort datetime values separately
+                //if (sortOptions.Contains("DateTime"))
+                //{
+                //    columnValue = t => ParseDate(t.GetColumnValue(copyOfColumnName));
+                //}
+                //else
+                //{
+                   columnValue = t => t.GetColumnSortingValue(copyOfColumnName);
+                //}
 
                 // and sort based on order
-                if (sortOptions.Contains("ASC"))
+                if (sortOptions.IsAscending())
                 {
                     sortedList = (isFirstTimeThrough) ? tmp.OrderBy(columnValue):sortedList.ThenBy(columnValue);
                     isFirstTimeThrough = false;
                 }
-                else if (sortOptions.Contains("DESC"))
+                else if (sortOptions.IsDescending())
                 {
                     sortedList = (isFirstTimeThrough) ? tmp.OrderByDescending(columnValue):sortedList.ThenByDescending(columnValue);
                     isFirstTimeThrough = false;
@@ -196,6 +202,7 @@ namespace ASR.Interface
 		public void FlushFilterCache()
 		{
 			results = null;
+            displayelements = null;
 		}
 
 		/// <summary>
@@ -263,9 +270,7 @@ namespace ASR.Interface
 		/// <returns>Results of the report</returns>
 		public IEnumerable<DisplayElement> GetResultElements(int start, int count)
 		{
-			int end = System.Math.Min(start + count, ResultsCount());
-
-			return DisplayElements.Where((t, i) => (start <= i) && (i < end));
+			return DisplayElements(start,count);
 		}
 
 		/// <summary>
@@ -279,22 +284,42 @@ namespace ASR.Interface
 			return results.Count;
 		}
 
+       
+        public void SetOrToggleSortColumn(string columnName)
+        {
+            if (SortColumns.ContainsKey(columnName))
+            {
+                SortColumns[columnName] = SortColumns[columnName].Toggle();
+            }
+            else
+            {
+                SortColumns.Clear();
+                SortColumns.Add(columnName, SortDirection.Ascending());
+            }
+        }
+
 	  
-		private NameValueCollection _sortColumns;
-		protected NameValueCollection SortColumns
+		private Dictionary<string,SortDirection> _sortColumns;
+        protected Dictionary<string, SortDirection> SortColumns
 		{
 			get
 			{
 				if (_sortColumns == null)
-				{ 
-                    _sortColumns = new NameValueCollection();
+				{
+                    _sortColumns = new Dictionary<string, SortDirection>();
 					foreach (var viewer in viewers.Values)
 					{
 						NameValueCollection parameters = Sitecore.StringUtil.ParseNameValueCollection(viewer.ReplacedAttributes, '|', '=');
 						string sortParameter = parameters["sort"];
 						if (sortParameter != null)
 						{
-							_sortColumns.Add( StringUtil.ParseNameValueCollection(sortParameter, '&', ',') );
+							var columnsortingdata =  StringUtil.ParseNameValueCollection(sortParameter, '&', ',') ;
+                          
+                            foreach (var key in columnsortingdata.AllKeys)
+                            {
+                               
+                                _sortColumns.Add(key, SortDirection.Parse(columnsortingdata[key]));
+                            }
 						}
 					}
 				}
@@ -302,4 +327,43 @@ namespace ASR.Interface
 			}
 		}
 	}
+    public struct SortDirection
+    {
+        private int direction;
+
+        public SortDirection Toggle()
+        {
+            return new SortDirection() { direction = (this.direction + 1) % 2 };
+        }
+
+        public static SortDirection Ascending()
+        {
+            return new SortDirection() { direction = 1 };
+        }
+
+        public static SortDirection Descending()
+        {
+            return new SortDirection() { direction = 0 };
+        }
+
+        public bool IsDescending()
+        {
+            return direction == 0;
+        }
+
+        public bool IsAscending()
+        {
+            return direction == 1;
+        }
+        public override string ToString()
+        {
+            if (IsAscending()) return "ASC";
+            return "DESC";
+        }
+        public static SortDirection Parse(string st)
+        {
+            if (st.Equals("desc", StringComparison.InvariantCultureIgnoreCase)) return SortDirection.Descending();
+            return SortDirection.Ascending();
+        }
+    }
 }

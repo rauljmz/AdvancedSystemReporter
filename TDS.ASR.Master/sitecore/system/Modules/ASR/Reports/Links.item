@@ -19,8 +19,15 @@ Network/32x32/link.png
 ----version----
 language: en
 version: 1
-revision: f82d0a92-91a9-44f7-9867-4c4886635c0c
+revision: 38259f12-d67f-4a36-8453-3af7966ac749
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 230
+
+<p>This report shows the relationship between items, i.e. fields in a source item contain references to other target items. You can navigate the relationships from source->target (references) of from target->source (referrers)</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f82d0a92-91a9-44f7-9867-4c4886635c0c
+38259f12-d67f-4a36-8453-3af7966ac749
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20100426T172024:634078992249356936
+20150204T134849:635586545297215215Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

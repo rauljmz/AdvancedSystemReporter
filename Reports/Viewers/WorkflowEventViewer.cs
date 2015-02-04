@@ -53,7 +53,7 @@ namespace ASR.Reports.Viewers
                         dElement.AddColumn(column.Header, wec.Item.DisplayName);
                         break;
                     case "date":
-                        dElement.AddColumn(column.Header, wec.WorkflowEvent.Date.ToString(GetDateFormat(null)));
+                        dElement.AddColumn(column.Header, wec.WorkflowEvent.Date.ToString(GetDateFormat(null)), Sitecore.DateUtil.ToIsoDate(wec.WorkflowEvent.Date));
                         break;
                     case "user":
                         dElement.AddColumn(column.Header, wec.WorkflowEvent.User);

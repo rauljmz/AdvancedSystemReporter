@@ -26,8 +26,15 @@ ar|sitecore\WCMS Supervisor|pe|+item:read|
 ----version----
 language: en
 version: 1
-revision: 6e7544c7-8550-448d-b15e-efe9c54e67a1
+revision: 34269cfc-7468-4235-9e9d-6d4606c36444
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 51
+
+<p>List of all the roles in a particular domain</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6e7544c7-8550-448d-b15e-efe9c54e67a1
+34269cfc-7468-4235-9e9d-6d4606c36444
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20120821T094806:634811392869840025
+20150204T134912:635586545527626393Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

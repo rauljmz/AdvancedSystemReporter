@@ -26,8 +26,15 @@ ar|sitecore\WCMS Supervisor|pe|+item:read|
 ----version----
 language: en
 version: 1
-revision: b1c2f96b-d7bc-47d5-85f9-dc605f58b039
+revision: 2fe31a28-ee75-4a67-b1ae-65532a487454
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 54
+
+<p>This lists all the users in a particular domain</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b1c2f96b-d7bc-47d5-85f9-dc605f58b039
+2fe31a28-ee75-4a67-b1ae-65532a487454
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20120821T101504:634811409041124970
+20150204T134929:635586545691351788Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -71,26 +71,28 @@ namespace ASR.Controls
 		protected void SortByColumn(int index)
 		{
 			string key = base.ColumnNames.GetKey(index);
-			if (this.SortBy == key)
-			{
-				this.SortAscending = !this.SortAscending;
-			}
-			else
-			{
-				this.SortBy = key;
-				this.SortAscending = true;
-			}
-			Func<DisplayElement, string> orderFunc = t => t.GetColumnValue(key);
-			IEnumerable<DisplayElement> sorterResultSet = null;
-			if (SortAscending)
-			{
-				sorterResultSet = Current.Context.Report.DisplayElements.OrderBy(orderFunc, SmartComparer.Instance);
-			}
-			else
-			{
-				sorterResultSet = Current.Context.Report.DisplayElements.OrderByDescending(orderFunc, SmartComparer.Instance);
-			}
-			Current.Context.Report.DisplayElements = sorterResultSet.ToList();
+            Current.Context.Report.SetOrToggleSortColumn(key);
+            Current.Context.Report.FlushDisplayElements();
+            //if (this.SortBy == key)
+            //{
+            //    this.SortAscending = !this.SortAscending;
+            //}
+            //else
+            //{
+            //    this.SortBy = key;
+            //    this.SortAscending = true;
+            //}
+            //Func<DisplayElement, string> orderFunc = t => t.GetColumnValue(key);
+            //IEnumerable<DisplayElement> sorterResultSet = null;
+            //if (SortAscending)
+            //{
+            //    sorterResultSet = Current.Context.Report.DisplayElements.OrderBy(orderFunc, SmartComparer.Instance);
+            //}
+            //else
+            //{
+            //    sorterResultSet = Current.Context.Report.DisplayElements.OrderByDescending(orderFunc, SmartComparer.Instance);
+            //}
+            //Current.Context.Report.DisplayElements = sorterResultSet.ToList();
 			this.Refresh();
 		}
 

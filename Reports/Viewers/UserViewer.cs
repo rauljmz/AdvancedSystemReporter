@@ -46,7 +46,7 @@ namespace ASR.Reports.Users
                         break;
 
                     case "lastupdated":
-                        dElement.AddColumn(column.Header, user.Profile.LastUpdatedDate.ToString("dd/MM/yy HH:mm"));
+                        dElement.AddColumn(column.Header, user.Profile.LastUpdatedDate.ToString("dd/MM/yy HH:mm"), Sitecore.DateUtil.ToIsoDate(user.Profile.LastUpdatedDate));
                         break;
                     case "clientlanguage":
                         dElement.AddColumn(column.Header, user.Profile.ClientLanguage);

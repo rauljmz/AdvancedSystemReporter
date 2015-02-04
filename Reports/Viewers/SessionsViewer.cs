@@ -27,10 +27,10 @@ namespace ASR.Reports.Sessions
                             dElement.AddColumn("User", session.UserName);
                             break;
                         case "created":
-                            dElement.AddColumn("Created", session.Created.ToString(GetDateFormat(null)));
+                            dElement.AddColumn("Created", session.Created.ToString(GetDateFormat(null)),Sitecore.DateUtil.ToIsoDate(session.Created));
                             break;
                         case "lastrequest":
-                            dElement.AddColumn("Last request", session.LastRequest.ToString(GetDateFormat(null)));
+                            dElement.AddColumn("Last request", session.LastRequest.ToString(GetDateFormat(null)), Sitecore.DateUtil.ToIsoDate(session.LastRequest));
                             break;
                         case "id":
                                          dElement.AddColumn("ID", session.SessionID);

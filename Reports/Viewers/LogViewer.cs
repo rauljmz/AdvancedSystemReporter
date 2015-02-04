@@ -38,7 +38,7 @@ namespace ASR.Reports.Logs
                         dElement.AddColumn(column.Header, logElement.Type.ToString());
 		                break;
                     case "date":
-                        dElement.AddColumn(column.Header, logElement.DateTime.ToString(GetDateFormat(null)));
+                        dElement.AddColumn(column.Header, logElement.DateTime.ToString(GetDateFormat(null)), Sitecore.DateUtil.ToIsoDate(logElement.DateTime));
 		                break;
                     case "message":
                         dElement.AddColumn(column.Header, logElement.Message);

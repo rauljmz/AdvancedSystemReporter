@@ -1,11 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ASR.Interface
 {
     public class DisplayElement
     {
-        private Dictionary<string,string> columns;                
+        private class Column
+        {
+            public Column(string name, string value)
+            {
+                Name = name;
+                Value = value;
+            }
+            public Column(string name, string value, string sortingvalue) : this(name,value)
+            {
+                SortingValue = sortingvalue;
+            }
+            public string Name { get; private set; }
+            public string Value {get; private set;}
+            string _sortingValue;
+            public string SortingValue
+            {
+                get { return _sortingValue ?? Value; }
+                private set { _sortingValue = value; }
+            }
+
+            public override int GetHashCode()
+            {
+                return Name.GetHashCode();
+            }
+            public override bool Equals(object obj)
+            {
+                var column = obj as Column;
+                if (column == null) return base.Equals(obj);
+                return column.Name.Equals(this.Name);
+            }
+        }
+        private HashSet<Column> columns;                
 
         /// <summary>
         /// Object returned by the scanner.
@@ -23,7 +55,7 @@ namespace ASR.Interface
         internal DisplayElement(object element)
         {
             Element = element;
-            columns = new Dictionary<string, string>();
+            columns = new HashSet<Column>();
             Icon = "";
             ExtraInfo = "";
         }
@@ -34,7 +66,7 @@ namespace ASR.Interface
         /// <returns>Valid column names for this element</returns>
         public IEnumerable<string> GetColumnNames()
         {
-            return columns.Keys;
+            return columns.Select(c => c.Name);
         }
         
         /// <summary>
@@ -42,11 +74,11 @@ namespace ASR.Interface
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        public void AddColumn(string name, string value)
+        public void AddColumn(string name, string value, string sortingvalue = null)
         {
             if (!HasColumn(name))
             {
-                columns.Add(name, value);                
+                columns.Add(new Column(name, value,sortingvalue));           
             }
         }
 
@@ -57,7 +89,7 @@ namespace ASR.Interface
         /// <returns></returns>
         public bool HasColumn(string name)
         {
-            return columns.ContainsKey(name);
+            return columns.Contains(new Column(name, null));
         }
 
         /// <summary>
@@ -67,8 +99,14 @@ namespace ASR.Interface
         /// <returns>null if the column is not defined.</returns>
         public string GetColumnValue(string name)
         {
-            if (!columns.ContainsKey(name)) return null;
-            return columns[name] as string;
+            if (!HasColumn(name)) return null;
+            return columns.First(c=> c.Name == name).Value;
+        }
+
+        public string GetColumnSortingValue(string name)
+        {
+            if (!HasColumn(name)) return null;
+            return columns.First(c => c.Name == name).SortingValue;
         }
     }
 }

@@ -19,8 +19,15 @@ Business/32x32/nonprofit.png
 ----version----
 language: en
 version: 1
-revision: fbe3d51c-3a89-49f9-be3d-674cffffe64d
+revision: 872bd90c-12c3-43cd-8aa8-22c548152aff
 
+----field----
+field: {E9C5B093-0D53-4F39-9383-F5C839441562}
+name: Description
+key: description
+content-length: 209
+
+<p>This report will highlight any items that were created before tokens replacmeents were added to the Standard Values. The consequence is the appearance of undesired $name, $now, etc. in your field values</p>
 ----field----
 field: {F4033239-E21D-488D-990D-78E45760FCE3}
 name: Scanners
@@ -43,6 +50,13 @@ content-length: 38
 
 {AFFAF9D7-51A4-48C5-A231-FDF76664FBAE}
 ----field----
+field: {E6B9CD5F-58E8-407D-9D45-4FE36544EA86}
+name: Commands
+key: commands
+content-length: 38
+
+{8AA1FF4D-77C1-43EA-8C4C-6A4D30548DEB}
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -62,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fbe3d51c-3a89-49f9-be3d-674cffffe64d
+872bd90c-12c3-43cd-8aa8-22c548152aff
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20120821T164959:634811645998728139
+20150204T134724:635586544449498408Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

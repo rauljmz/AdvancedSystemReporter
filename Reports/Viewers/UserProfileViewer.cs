@@ -19,7 +19,7 @@ namespace ASR.Reports.Users
 
             dElement.AddColumn("Email", user.Profile.Email);
             dElement.AddColumn("FullName", user.Profile.FullName);
-            dElement.AddColumn("Last Updated", user.Profile.LastUpdatedDate.ToString("dd/MM/yy HH:mm"));
+            dElement.AddColumn("Last Updated", user.Profile.LastUpdatedDate.ToString("dd/MM/yy HH:mm"), Sitecore.DateUtil.ToIsoDate(user.Profile.LastUpdatedDate));
             dElement.AddColumn("Client Language", user.Profile.ClientLanguage);
             dElement.AddColumn("Content Language", user.Profile.ContentLanguage);
             dElement.AddColumn("Comment", user.Profile.Comment);

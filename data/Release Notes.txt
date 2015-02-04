@@ -1,5 +1,10 @@
 Advanced System Reporter
 ------------------------
+v.1.7.2
+- fixed sorting on date columns
+- fixed refresh bug, where clicking refresh would not repopulate the display elements
+- added missing report descriptions
+
 v.1.7.1
 - added reports missing from package
 

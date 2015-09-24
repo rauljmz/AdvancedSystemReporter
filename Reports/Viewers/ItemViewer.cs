@@ -341,6 +341,7 @@ namespace ASR.Reports.Items
                         break;
                     case "checklist":
                     case "multilist":
+                    case "multilist with search":
                     case "treelist":
                     case "treelistex":
                         var multilistField = (MultilistField)field;

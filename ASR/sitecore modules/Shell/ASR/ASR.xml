@@ -8,7 +8,7 @@
 
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<ASR>
-		<FormPage Height="250px">            
+		<FormPage Height="250px" Scroll="yes">            
             <Stylesheet Src="Ribbon.css" DeviceDependant="true" runat="server" />
 
             <CodeBeside Type="ASR.App.MainForm,ASR"/>

@@ -28,7 +28,7 @@ namespace ASR.Reports.Logs
             Match match = Regex.Match(Message, @"(?<db>\w+):(?<path>[^,]+), language: (?<language>[^,]+), version: (?<version>[^,]+), id: (?<id>\{.{36}\}).*");
             if (!match.Success) return null;
 
-            Sitecore.Data.Version version = new Sitecore.Data.Version(match.Groups["version"].Value);
+            Sitecore.Data.Version version = Sitecore.Data.Version.Parse(match.Groups["version"].Value);
             Sitecore.Globalization.Language language = Sitecore.Globalization.Language.Parse(match.Groups["language"].Value);
             Sitecore.Data.ID id = Sitecore.Data.ID.Parse(match.Groups["id"].Value);
             Sitecore.Data.Database db = Sitecore.Data.Database.GetDatabase(match.Groups["db"].Value);

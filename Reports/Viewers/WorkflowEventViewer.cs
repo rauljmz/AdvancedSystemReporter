@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Linq;
 using Sitecore.Data.Items;
 using ASR.Reports.Scanners;
 using ASR.Interface;
@@ -65,7 +66,7 @@ namespace ASR.Reports.Viewers
                         dElement.AddColumn(column.Header, getStateName(wec.WorkflowEvent.NewState));
                         break;
                     case "text":
-                        dElement.AddColumn(column.Header, wec.WorkflowEvent.Text);
+                        dElement.AddColumn(column.Header, wec.WorkflowEvent.CommentFields.FirstOrDefault().Value);
                         break;
                     case "paths":
                         dElement.AddColumn(column.Header, wec.Item.Paths.Path);

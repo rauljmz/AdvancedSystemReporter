@@ -172,8 +172,7 @@ namespace ASR.Controls
 					}                    
 					handle["value"] = value;
 				    handle["id"] =
-				        new ItemUri(Sitecore.Data.ID.Parse(ItemID), Language.Parse(ItemLanguage), new Version(ItemVersion),
-				                    Sitecore.Context.ContentDatabase).ToString(ItemUriFormat.Uri);
+				        new ItemUri(Sitecore.Data.ID.Parse(ItemID), Language.Parse(ItemLanguage),Sitecore.Context.ContentDatabase).ToString(ItemUriFormat.Uri);
 					handle.Add(urlString);                    
                     SheerResponse.ShowModalDialog(urlString.ToString(), "800px", "500px", string.Empty, true);
 					args.WaitForPostBack();

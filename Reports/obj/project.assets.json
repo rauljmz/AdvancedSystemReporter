@@ -1,0 +1,2468 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "EnterpriseLibrary.Common/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Caching/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Configuration/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Data/6.0.1304.1": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.ServiceBus/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Lucene.Net/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/NET40/Lucene.Net.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/Lucene.Net.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Web.Deployment/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        },
+        "runtime": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        }
+      },
+      "Mvp.Xml/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Mvp.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Mvp.Xml.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      },
+      "Sitecore.Abstractions/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        }
+      },
+      "Sitecore.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Abstractions": "9.2.0",
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Publishing.WebDeploy": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Data.Linq",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.DynamicData",
+          "System.Web.Entity",
+          "System.Web.Extensions.Design",
+          "System.Web.Services",
+          "System.Windows.Forms"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Client.dll": {}
+        }
+      },
+      "Sitecore.Kernel/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Configuration": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.1304.1",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.1304",
+          "HtmlAgilityPack": "1.4.9.5",
+          "Lucene.Net": "3.0.3",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Mvp.Xml": "2.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "Sitecore.NVelocity": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Zip": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Design",
+          "System.DirectoryServices",
+          "System.IO.Compression.FileSystem",
+          "System.Runtime.Caching",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.Services",
+          "sysglobl"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        }
+      },
+      "Sitecore.Logging/9.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Web",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        }
+      },
+      "Sitecore.Logging.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Runtime.Serialization",
+          "System.Web",
+          "System.Web.Extensions",
+          "System.Xml",
+          "System.Xml.Linq",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        }
+      },
+      "Sitecore.Nexus/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Consumption/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Nexus.Licensing": "2.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Licensing/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Xml": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        }
+      },
+      "Sitecore.NVelocity/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging.Client": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        }
+      },
+      "Sitecore.Publishing.WebDeploy/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Deployment": "3.5.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        }
+      },
+      "Sitecore.Zip/9.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.Xml/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Security",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Cryptography.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "ASR/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Sitecore.Client": "9.2.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ASR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ASR.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "EnterpriseLibrary.Common/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Caching/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Configuration/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Data/6.0.1304.1": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.ServiceBus/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Lucene.Net/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/NET40/Lucene.Net.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/Lucene.Net.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Web.Deployment/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        },
+        "runtime": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        }
+      },
+      "Mvp.Xml/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Mvp.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Mvp.Xml.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      },
+      "Sitecore.Abstractions/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        }
+      },
+      "Sitecore.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Abstractions": "9.2.0",
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Publishing.WebDeploy": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Data.Linq",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.DynamicData",
+          "System.Web.Entity",
+          "System.Web.Extensions.Design",
+          "System.Web.Services",
+          "System.Windows.Forms"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Client.dll": {}
+        }
+      },
+      "Sitecore.Kernel/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Configuration": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.1304.1",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.1304",
+          "HtmlAgilityPack": "1.4.9.5",
+          "Lucene.Net": "3.0.3",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Mvp.Xml": "2.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "Sitecore.NVelocity": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Zip": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Design",
+          "System.DirectoryServices",
+          "System.IO.Compression.FileSystem",
+          "System.Runtime.Caching",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.Services",
+          "sysglobl"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        }
+      },
+      "Sitecore.Logging/9.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Web",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        }
+      },
+      "Sitecore.Logging.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Runtime.Serialization",
+          "System.Web",
+          "System.Web.Extensions",
+          "System.Xml",
+          "System.Xml.Linq",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        }
+      },
+      "Sitecore.Nexus/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Consumption/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Nexus.Licensing": "2.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Licensing/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Xml": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        }
+      },
+      "Sitecore.NVelocity/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging.Client": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        }
+      },
+      "Sitecore.Publishing.WebDeploy/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Deployment": "3.5.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        }
+      },
+      "Sitecore.Zip/9.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Cryptography.Xml/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Security",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Cryptography.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      },
+      "ASR/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Sitecore.Client": "9.2.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ASR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ASR.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "EnterpriseLibrary.Common/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Caching/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Configuration/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Data/6.0.1304.1": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.ServiceBus/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Lucene.Net/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/NET40/Lucene.Net.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/Lucene.Net.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Web.Deployment/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        },
+        "runtime": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        }
+      },
+      "Mvp.Xml/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Mvp.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Mvp.Xml.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      },
+      "Sitecore.Abstractions/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        }
+      },
+      "Sitecore.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Abstractions": "9.2.0",
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Publishing.WebDeploy": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Data.Linq",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.DynamicData",
+          "System.Web.Entity",
+          "System.Web.Extensions.Design",
+          "System.Web.Services",
+          "System.Windows.Forms"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Client.dll": {}
+        }
+      },
+      "Sitecore.Kernel/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Configuration": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.1304.1",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.1304",
+          "HtmlAgilityPack": "1.4.9.5",
+          "Lucene.Net": "3.0.3",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Mvp.Xml": "2.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "Sitecore.NVelocity": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Zip": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Design",
+          "System.DirectoryServices",
+          "System.IO.Compression.FileSystem",
+          "System.Runtime.Caching",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.Services",
+          "sysglobl"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        }
+      },
+      "Sitecore.Logging/9.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Web",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        }
+      },
+      "Sitecore.Logging.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Runtime.Serialization",
+          "System.Web",
+          "System.Web.Extensions",
+          "System.Xml",
+          "System.Xml.Linq",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        }
+      },
+      "Sitecore.Nexus/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Consumption/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Nexus.Licensing": "2.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Licensing/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Xml": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        }
+      },
+      "Sitecore.NVelocity/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging.Client": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        }
+      },
+      "Sitecore.Publishing.WebDeploy/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Deployment": "3.5.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        }
+      },
+      "Sitecore.Zip/9.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Cryptography.Xml/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Security",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Cryptography.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      },
+      "ASR/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Sitecore.Client": "9.2.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ASR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ASR.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "EnterpriseLibrary.Common/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Caching/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Configuration/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.0",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.Data/6.0.1304.1": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.ServiceBus/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll": {}
+        }
+      },
+      "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage/6.0.1304": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Lucene.Net/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/NET40/Lucene.Net.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/Lucene.Net.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Web.Deployment/3.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        },
+        "runtime": {
+          "lib/Net40/Microsoft.Web.Delegation.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.Tracing.dll": {},
+          "lib/Net40/Microsoft.Web.Deployment.dll": {}
+        }
+      },
+      "Mvp.Xml/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/Mvp.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net20/Mvp.Xml.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      },
+      "Sitecore.Abstractions/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Abstractions.dll": {}
+        }
+      },
+      "Sitecore.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Abstractions": "9.2.0",
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Publishing.WebDeploy": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Data.Linq",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.DynamicData",
+          "System.Web.Entity",
+          "System.Web.Extensions.Design",
+          "System.Web.Services",
+          "System.Windows.Forms"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Client.dll": {}
+        }
+      },
+      "Sitecore.Kernel/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Caching": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Configuration": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.Data": "6.0.1304.1",
+          "EnterpriseLibrary.TransientFaultHandling.ServiceBus": "6.0.1304",
+          "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage": "6.0.1304",
+          "HtmlAgilityPack": "1.4.9.5",
+          "Lucene.Net": "3.0.3",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Mvp.Xml": "2.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "Sitecore.NVelocity": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0",
+          "Sitecore.Zip": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "System.Design",
+          "System.DirectoryServices",
+          "System.IO.Compression.FileSystem",
+          "System.Runtime.Caching",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.Services",
+          "sysglobl"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Kernel.dll": {}
+        }
+      },
+      "Sitecore.Logging/9.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Web",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.dll": {}
+        }
+      },
+      "Sitecore.Logging.Client/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging": "9.2.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Runtime.Serialization",
+          "System.Web",
+          "System.Web.Extensions",
+          "System.Xml",
+          "System.Xml.Linq",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Logging.Client.dll": {}
+        }
+      },
+      "Sitecore.Nexus/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Kernel": "9.2.0",
+          "Sitecore.Nexus.Consumption": "1.1.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Nexus.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Consumption/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Nexus.Licensing": "2.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll": {}
+        }
+      },
+      "Sitecore.Nexus.Licensing/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Xml": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll": {}
+        }
+      },
+      "Sitecore.NVelocity/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Sitecore.Logging.Client": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.NVelocity.dll": {}
+        }
+      },
+      "Sitecore.Publishing.WebDeploy/9.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Deployment": "3.5.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Publishing.WebDeploy.dll": {}
+        }
+      },
+      "Sitecore.Zip/9.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        },
+        "runtime": {
+          "lib/net471/Sitecore.Zip.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.AccessControl.dll": {}
+        }
+      },
+      "System.Security.Cryptography.Xml/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Security",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Cryptography.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Data",
+          "System.Data.OracleClient",
+          "System.Drawing",
+          "System.Net",
+          "System.ServiceProcess",
+          "System.Transactions",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Security.Principal.Windows.dll": {}
+        }
+      },
+      "ASR/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Sitecore.Client": "9.2.0",
+          "Sitecore.Kernel": "9.2.0"
+        },
+        "compile": {
+          "bin/placeholder/ASR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ASR.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EnterpriseLibrary.Common/6.0.1304": {
+      "sha512": "w/ua1PWAQD1/CnJ+qz/5APgmqI/1YnbamnwFGSotm7b66sFIkrnfLC+9+WzcSZWnePwwUw3Pl2QsLVDyX7NwaQ==",
+      "type": "package",
+      "path": "enterpriselibrary.common/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EnterpriseLibrary.Configuration.xsd",
+        "Update-EntlibConfiguration.ps1",
+        "enterpriselibrary.common.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.common.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling/6.0.1304": {
+      "sha512": "sgRoEFLCYkifLnzAu8zsfnqmCmIFR4zyTxyi4oFD7GyGGaD4pHwuGlrgNeGIASrk4G81eWRjkoVHApeRaB50Ew==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.nuspec",
+        "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll",
+        "lib/portable-net45+win+wp8/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling.Caching/6.0.1304": {
+      "sha512": "q5QJGRZZiXZnKwfa/mHvQsFzfWXnhcOSvx0HDpJWTDP1Jos/DF+JhuRyZ61ikYa638Ctx0cj8NFdo0PUw4t7wA==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling.caching/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.caching.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.caching.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling.Configuration/6.0.1304": {
+      "sha512": "orhaY0QlAxEV9DIfbFm6SK9RdCWBDl/FyzPJsUWz7phvxxKvkkMksog+Rc0dOi9/sPhf6gBEGteZoSXWTuXtDA==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling.configuration/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.configuration.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.configuration.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling.Data/6.0.1304.1": {
+      "sha512": "hhMw7Kpb8rmi5lyiCJ4OrJM1EQIftjFMfHBheE/AtJegBsk6ex8DRymEaSFIxnbsUbVdHJVD9Vv1Pr2EkbHLxQ==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling.data/6.0.1304.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.data.6.0.1304.1.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.data.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling.ServiceBus/6.0.1304": {
+      "sha512": "BF+5fuHgnPHyt6sG/lEDEZGB7fRA8nMp7ExHMowZT5jQl0DJF+ITwFvuKxJfsyaVMn/wsybBtOe+y97rO3OGiQ==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling.servicebus/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.servicebus.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.servicebus.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage/6.0.1304": {
+      "sha512": "VDM0nf1JzuxckAyh+0UTLwo727jTS01eI5KraWRqgj4uo7owZUkEGGX1/LpYCv6pe7/4Y7XmucNkcqekKOrd7Q==",
+      "type": "package",
+      "path": "enterpriselibrary.transientfaulthandling.windowsazure.storage/6.0.1304",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.txt",
+        "enterpriselibrary.transientfaulthandling.windowsazure.storage.6.0.1304.nupkg.sha512",
+        "enterpriselibrary.transientfaulthandling.windowsazure.storage.nuspec",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll",
+        "lib/NET45/Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.xml",
+        "tools/Utils.psm1",
+        "tools/install.ps1"
+      ]
+    },
+    "HtmlAgilityPack/1.4.9.5": {
+      "sha512": "zk7zsIaPkyBvYoVDsnx52SbKtvcmo2bcgNBshhSG++RnHMYoh0dqxRuQSznY+w6luiqR35OiHTk1L73SUAGKLw==",
+      "type": "package",
+      "path": "htmlagilitypack/1.4.9.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "HAPIcon.png",
+        "htmlagilitypack.1.4.9.5.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net20/HtmlAgilityPack.dll",
+        "lib/Net20/HtmlAgilityPack.pdb",
+        "lib/Net20/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.pri",
+        "lib/NetCore45/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/sl5/HtmlAgilityPack.XML",
+        "lib/sl5/HtmlAgilityPack.dll",
+        "lib/sl5/HtmlAgilityPack.pdb",
+        "readme.txt"
+      ]
+    },
+    "Lucene.Net/3.0.3": {
+      "sha512": "A/70q4eDcuuafQeDB9eaiDP9FQG7X29T4VIYRphS7Wk8kAM9gNcfVqYyd0H8BJ1BTpA5C1ORm9RzFn4BiNavrw==",
+      "type": "package",
+      "path": "lucene.net/3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Lucene.Net.3.0.3.nupkg.sha512",
+        "Lucene.Net.nuspec",
+        "lib/NET35/Lucene.Net.XML",
+        "lib/NET35/Lucene.Net.dll",
+        "lib/NET35/Lucene.Net.pdb",
+        "lib/NET40/Lucene.Net.XML",
+        "lib/NET40/Lucene.Net.dll",
+        "lib/NET40/Lucene.Net.pdb"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/2.1.1": {
+      "sha512": "RVdgNWT/73M0eCpreGpWv5NmbHFGQzzW+G7nChK8ej84m+d1nzeWrtqcRYnEpKNx3B8V/Uek4tNP0WCaCNjYnQ==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+      "sha512": "MgYpU5cwZohUMKKg3sbPhvGG+eAZ/59E9UwPwlrUkyXU+PGzqwZg9yyQNjhxuAWmoNoFReoemeCku50prYSGzA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Web.Deployment/3.5.0": {
+      "sha512": "hV4s/dtGXhtwzXBgmvaEcrkRBgfRoV0tb34B1uBFfU6QTeYwsPZBLQ1c0G0KqNyzRoPqCg/pMlVZ0w7BOq9OEw==",
+      "type": "package",
+      "path": "microsoft.web.deployment/3.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/License.rtf",
+        "lib/Net40/Microsoft.Web.Delegation.dll",
+        "lib/Net40/Microsoft.Web.Deployment.Tracing.dll",
+        "lib/Net40/Microsoft.Web.Deployment.dll",
+        "lib/Redist.txt",
+        "microsoft.web.deployment.3.5.0.nupkg.sha512",
+        "microsoft.web.deployment.nuspec"
+      ]
+    },
+    "Mvp.Xml/2.3.0": {
+      "sha512": "us4ukKyok9OAuLKFfdrCha/8/ehF7FZ1oAUotcb6dowiTVEcDHdsz9pzFKbWBJ4JLB99xACTL6bd5k3ArSHALw==",
+      "type": "package",
+      "path": "mvp.xml/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReleaseNotes.htm",
+        "lib/net20/Mvp.Xml.dll",
+        "lib/net20/Mvp.Xml.xml",
+        "license.txt",
+        "mvp.xml.2.3.0.nupkg.sha512",
+        "mvp.xml.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "SharpZipLib/0.86.0": {
+      "sha512": "5DbS1SlKLMi+WG00Cm0ueYf2oyXJrowETQk8nx96rmdjTuHsA3laPykGV7Sxi0R5Xxfx0Kh/EfacAZ1f6M7y/g==",
+      "type": "package",
+      "path": "sharpziplib/0.86.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "SharpZipLib.0.86.0.nupkg.sha512",
+        "SharpZipLib.nuspec",
+        "lib/11/ICSharpCode.SharpZipLib.dll",
+        "lib/20/ICSharpCode.SharpZipLib.dll",
+        "lib/SL3/SharpZipLib.Silverlight3.dll",
+        "lib/SL4/SharpZipLib.Silverlight4.dll"
+      ]
+    },
+    "Sitecore.Abstractions/9.2.0": {
+      "sha512": "LO+dBbceQzpddgMWZStAyk0jzI5F6WSAn5Ba/ov05KW5/chD6LsUjQ2KOhLgqmLgvx1Eeqpkt8mlB2Ppbq/tdw==",
+      "type": "package",
+      "path": "sitecore.abstractions/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Abstractions.dll",
+        "lib/net471/Sitecore.Abstractions.xml",
+        "sitecore.abstractions.9.2.0.nupkg.sha512",
+        "sitecore.abstractions.nuspec"
+      ]
+    },
+    "Sitecore.Client/9.2.0": {
+      "sha512": "0ER2HdJzcp3vmyBT0oW9s20Nwb7AGFPvS9/6rZCLjncs9onQ/nfdskkTEV+pv9/ep+u88BNBsuolgdi+BDfo2w==",
+      "type": "package",
+      "path": "sitecore.client/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Client.dll",
+        "lib/net471/Sitecore.Client.xml",
+        "sitecore.client.9.2.0.nupkg.sha512",
+        "sitecore.client.nuspec"
+      ]
+    },
+    "Sitecore.Kernel/9.2.0": {
+      "sha512": "+zfsDxofFppHuAfA+BToMRy8Nj3cbnMxhN8ccr5H7BI9nUvum0N7zp7+/lBitWVot3Ets4ZmrAiRIoPfnHEPxA==",
+      "type": "package",
+      "path": "sitecore.kernel/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Kernel.dll",
+        "lib/net471/Sitecore.Kernel.xml",
+        "sitecore.kernel.9.2.0.nupkg.sha512",
+        "sitecore.kernel.nuspec"
+      ]
+    },
+    "Sitecore.Logging/9.2.0": {
+      "sha512": "qpSoY0ctmSay5UPrlCE2EnqFsQQL8g5EeQcwrDVVtPRZpadIM/cDKNx0eLg3V81V59sKeJXYsp3hO6DpXlSADw==",
+      "type": "package",
+      "path": "sitecore.logging/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Logging.dll",
+        "lib/net471/Sitecore.Logging.xml",
+        "sitecore.logging.9.2.0.nupkg.sha512",
+        "sitecore.logging.nuspec"
+      ]
+    },
+    "Sitecore.Logging.Client/9.2.0": {
+      "sha512": "4/JwLbOX+x48Nx7YeqakYOZtMMvH5gUQloihPrkzCqEgEGXnqT+Ea21ZYWg0xDHfLpEz1kNCXhlHnwTEZhoubg==",
+      "type": "package",
+      "path": "sitecore.logging.client/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Logging.Client.dll",
+        "lib/net471/Sitecore.Logging.Client.xml",
+        "sitecore.logging.client.9.2.0.nupkg.sha512",
+        "sitecore.logging.client.nuspec"
+      ]
+    },
+    "Sitecore.Nexus/9.2.0": {
+      "sha512": "u0uBYEfsA4PDxM7rX66IL0IR5dqAstpcck0Fr2pmCR/Q3RPJSikY5kzy1VTXCRG34k0RVIessYcZfloKhIKN3w==",
+      "type": "package",
+      "path": "sitecore.nexus/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Nexus.dll",
+        "sitecore.nexus.9.2.0.nupkg.sha512",
+        "sitecore.nexus.nuspec"
+      ]
+    },
+    "Sitecore.Nexus.Consumption/1.1.0": {
+      "sha512": "0O3XWxlbyYKZW+okofMAO49E8sLcflqcXKoYX6HeQZB4QB923IeyIZdBbqbJrBnRwSRKf/favNkXT1BPTV6+9Q==",
+      "type": "package",
+      "path": "sitecore.nexus.consumption/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/netstandard2.0/Sitecore.Nexus.Consumption.dll",
+        "sitecore.nexus.consumption.1.1.0.nupkg.sha512",
+        "sitecore.nexus.consumption.nuspec"
+      ]
+    },
+    "Sitecore.Nexus.Licensing/2.0.6": {
+      "sha512": "EbSm7FZbKIviOiklKcBRopkgyFjpLopsihPdT/pNSEAbkAM0ldaEu2kpKTmfoVBHBiRAh16ygq6CsJIMHm8AHg==",
+      "type": "package",
+      "path": "sitecore.nexus.licensing/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/Sitecore.Nexus.Licensing.dll",
+        "sitecore.nexus.licensing.2.0.6.nupkg.sha512",
+        "sitecore.nexus.licensing.nuspec"
+      ]
+    },
+    "Sitecore.NVelocity/9.2.0": {
+      "sha512": "h9l8thPWUfemfNtOwQy2wjY2UEIwqxsagdiDkWF6ECI0UgsgFqEgvrIyMk+ECJqPmMwToGJRrnBoILLlyIicWg==",
+      "type": "package",
+      "path": "sitecore.nvelocity/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.NVelocity.dll",
+        "lib/net471/Sitecore.NVelocity.xml",
+        "sitecore.nvelocity.9.2.0.nupkg.sha512",
+        "sitecore.nvelocity.nuspec"
+      ]
+    },
+    "Sitecore.Publishing.WebDeploy/9.2.0": {
+      "sha512": "Bx6X6KkaHfdIa1iHBwTQx1PYRH0MgPOaAiQRm0YOKvpO4ThULSJPd2TjSodbG5x9cssPDSHTuc1vfrNMRhMYLw==",
+      "type": "package",
+      "path": "sitecore.publishing.webdeploy/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Publishing.WebDeploy.dll",
+        "lib/net471/Sitecore.Publishing.WebDeploy.xml",
+        "sitecore.publishing.webdeploy.9.2.0.nupkg.sha512",
+        "sitecore.publishing.webdeploy.nuspec"
+      ]
+    },
+    "Sitecore.Zip/9.2.0": {
+      "sha512": "s510XlUAl8/Vkj4bBOHBj/0lZECoy7gQq0tuoeG5mCgkYHZrcK95zYFgV0LJLfj0XEWaxovAZdzaMVtn1SqdZA==",
+      "type": "package",
+      "path": "sitecore.zip/9.2.0",
+      "files": [
+        ".nupkg.metadata",
+        "Sitecore.Myget.Licence.md",
+        "lib/net471/Sitecore.Zip.dll",
+        "lib/net471/Sitecore.Zip.xml",
+        "sitecore.zip.9.2.0.nupkg.sha512",
+        "sitecore.zip.nuspec"
+      ]
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "sha512": "vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "type": "package",
+      "path": "system.security.accesscontrol/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.4.5.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Cryptography.Xml/4.5.0": {
+      "sha512": "i2Jn6rGXR63J0zIklImGRkDIJL4b1NfPSEbIVHBlqoIb12lfXIigCbDRpDmIEzwSo/v1U5y/rYJdzZYSyCWxvg==",
+      "type": "package",
+      "path": "system.security.cryptography.xml/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Cryptography.Xml.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "ref/net461/System.Security.Cryptography.Xml.dll",
+        "ref/net461/System.Security.Cryptography.Xml.xml",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.xml",
+        "system.security.cryptography.xml.4.5.0.nupkg.sha512",
+        "system.security.cryptography.xml.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Permissions/4.5.0": {
+      "sha512": "9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "type": "package",
+      "path": "system.security.permissions/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.dll",
+        "ref/net461/System.Security.Permissions.xml",
+        "ref/netstandard2.0/System.Security.Permissions.dll",
+        "ref/netstandard2.0/System.Security.Permissions.xml",
+        "system.security.permissions.4.5.0.nupkg.sha512",
+        "system.security.permissions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "type": "package",
+      "path": "system.security.principal.windows/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.4.5.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "ASR/1.0.0": {
+      "type": "project",
+      "path": "../ASR/ASR.csproj",
+      "msbuildProject": "../ASR/ASR.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "ASR >= 1.0.0",
+      "Sitecore.Kernel >= 9.2.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\loic\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Projects\\ASR\\Reports\\ASR.Reports.csproj",
+      "projectName": "ASR.Reports",
+      "projectPath": "D:\\Projects\\ASR\\Reports\\ASR.Reports.csproj",
+      "packagesPath": "C:\\Users\\loic\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\ASR\\Reports\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\loic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {
+            "D:\\Projects\\ASR\\ASR\\ASR.csproj": {
+              "projectPath": "D:\\Projects\\ASR\\ASR\\ASR.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Sitecore.Kernel": {
+            "target": "Package",
+            "version": "[9.2.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

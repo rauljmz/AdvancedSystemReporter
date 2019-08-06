@@ -47,7 +47,7 @@ namespace ASR.Reports.Filters
                 {
                     var versions = item.Versions.GetVersionNumbers();
                     var minVersion = versions.Min(v => v.Number);
-                    item = item.Database.GetItem(item.ID, item.Language, new Version(minVersion)); 
+                    item = item.Database.GetItem(item.ID, item.Language, Version.Parse(minVersion)); 
                 }
 				DateTime dateCreated = item.Statistics.Created;
 				if (FromDate <= dateCreated && dateCreated < ToDate)
